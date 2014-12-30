@@ -16,6 +16,11 @@
 	{
 		background: #fff;
 	}
+	.centered
+			{
+				text-align: center;
+				margin:auto
+			}
 
 		body.is-loading *
 		{
