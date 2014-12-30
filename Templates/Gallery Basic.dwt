@@ -83,15 +83,24 @@
 
 				<!-- About Me -->
 					<section id="about" class="three">
-						<div class="container">
-
-							<header>
-							  <h2>Gallery Name</h2>
-							</header>
-							<a href="#" class="image featured"></a>
-							<p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus 
-							  ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae 
-						  laoreet eget cubilia quam non etiam odio tincidunt montes. </p>
+					  <div class="container">
+					    <header>
+							  <!-- TemplateBeginEditable name="Gallery Name" -->
+                            <h2>
+                            Gallery Name
+                            </h2>
+							  <!-- TemplateEndEditable -->
+						  </header>
+						  <!-- TemplateBeginEditable name="Gallery" -->
+							<p>
+                            
+							</p>
+						  <!-- TemplateEndEditable -->
+						  <!-- TemplateBeginEditable name="Description" -->
+                          	<p>
+                            Descrption
+                            </p>
+						  <!-- TemplateEndEditable -->
 						</div>
 					</section>
 			
