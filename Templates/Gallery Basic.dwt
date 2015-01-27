@@ -55,7 +55,7 @@
 							
 							-->
 							<ul>
-								<li><a href="index.html#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+								<li><a href="index.html#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Design Portfolio</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Gallery</span></a></li>
                                 <li><a href="" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-sitemap ">#</span></a></li>
 							</ul>
