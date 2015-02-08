@@ -56,7 +56,7 @@
 							-->
 							<ul>
 								<li><a href="index.html#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Design Portfolio</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Gallery</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-picture-o">Gallery</span></a></li>
                                 <li><a href="" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-sitemap ">#</span></a></li>
 							</ul>
 						</nav>
@@ -67,10 +67,9 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon fa-facebook-square"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon fa-linkedin-square"><span class="label">Linkedin</span></a></li>
+                            <li><a href="#" class="icon fa-google-plus-square"><span class="label">Google</span></a></li>
 							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 				
@@ -82,7 +81,7 @@
 			<div id="main">
 
 				<!-- About Me -->
-					<section id="about" class="three">
+			  <section id="about" class="three">
 					  <div class="container">
 					    <header>
 							  <!-- TemplateBeginEditable name="Gallery Name" -->
@@ -90,7 +89,7 @@
                             Gallery Name
                             </h2>
 							  <!-- TemplateEndEditable -->
-						  </header>
+					    </header>
 						  <!-- TemplateBeginEditable name="Gallery" -->
 							<p>
                             
@@ -101,17 +100,18 @@
                             Descrption
                             </p>
 						  <!-- TemplateEndEditable -->
-						</div>
+				</div>
 					</section>
 			
 				<!-- Contact -->
+				<!-- TemplateBeginEditable name="Nav" -->
 					<section id="contact" class="four">
 						<div class="container">
 							<a href="#" class="button scrolly">Previous Gallery</a> 
                             <a href="#" class="button scrolly">Back to #</a>
-                          	<a href="#" class="button scrolly">Next Gallery</a></div>
-					</section>
-			
+                   	  <a href="#" class="button scrolly">Next Gallery</a></div>
+			  </section>
+			<!-- TemplateEndEditable -->
 			</div>
 
 		<!-- Footer -->
@@ -119,7 +119,7 @@
 				
 				<!-- Copyright -->
 					<ul class="copyright">
-					  <li>&copy; 2014 Coralite Woodworks LLC, All rights reserved.</li>
+					  <li>&copy; 2015 Coralite Woodworks LLC, All rights reserved.</li>
                       <li>9 Dusty Lane Unit 3 • Newtown CT 06470</li>
                       <li>Office (203) 364-9600</li>
                       <li>Cell (203) 943-8259</li>
