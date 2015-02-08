@@ -4,7 +4,7 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html><!-- InstanceBegin template="/Templates/Gallery Basic.dwt" codeOutsideHTMLIsLocked="false" -->
+<html>
 	<head>
 		<title>Prologue by HTML5 UP</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -57,7 +57,7 @@
 							<ul>
 								<li><a href="index.html#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Design Portfolio</span></a></li>
 								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-picture-o">Gallery</span></a></li>
-                                <li><a href="" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-sitemap ">#</span></a></li>
+                                <li><a href="Kitchens.html" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-sitemap ">Kitchens</span></a></li>
 							</ul>
 						</nav>
 						
@@ -83,28 +83,29 @@
 				<!-- About Me -->
 			  <section id="about" class="three">
 					  <div class="container">
-						  <!-- InstanceBeginEditable name="Gallery" -->
+
+						  <!-- TemplateBeginEditable name="Gallery" -->
 							<p>
                             
 							</p>
-						  <!-- InstanceEndEditable -->
-						  <!-- InstanceBeginEditable name="Description" -->
+						  <!-- TemplateEndEditable -->
+						  <!-- TemplateBeginEditable name="Description" -->
                           	<p>
                             Descrption
                             </p>
-						  <!-- InstanceEndEditable -->
+						  <!-- TemplateEndEditable -->
 				</div>
 					</section>
 			
 				<!-- Contact -->
-				<!-- InstanceBeginEditable name="Nav" -->
+				<!-- TemplateBeginEditable name="Nav" -->
 					<section id="contact" class="four">
 						<div class="container">
 							<a href="#" class="button scrolly">Previous Gallery</a> 
-                            <a href="#" class="button scrolly">Back to #</a>
+                            <a href="Kitchens.html" class="button scrolly">Back to Kitchens</a>
                    	  <a href="#" class="button scrolly">Next Gallery</a></div>
 			  </section>
-			<!-- InstanceEndEditable -->
+			<!-- TemplateEndEditable -->
 			</div>
 
 		<!-- Footer -->
@@ -121,4 +122,4 @@
 			</div>
 
 	</body>
-<!-- InstanceEnd --></html>
+</html>
