@@ -276,6 +276,7 @@
 			
 				ul.icons li
 				{
+					margin: .45em;
 					display: inline-block;
 				}
 				
