@@ -6,10 +6,10 @@
 -->
 <html>
 	<head>
-		<title>Prologue by HTML5 UP</title>
+		<title>Coralite Woodworks</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="keywords" content="Carpentry, Design build, Remodeling, Cabinets, Custom Cabinets, Cabinetry, Kitchen Cabinets, Custom Kitchen Cabinets, Additions, remodels, Home Improvement, Wood cabinets, Entertainment centers, trim work, tile work, bathroom renovation, bathroom remodel, kitchen remodel, kitchen renovation, Restoration, second story addition, garage addition, pool house, TV Cabinet, Entertainment unit, Woodworker, Cabinetmaker, Home remodel, Carpenter, Medicine Cabinets, Vanity Mirrors, Custom Vanities, Bathroom Vanity, Built-in Cabinets, Mantels, Custom Furniture, Wine storage Cabinets, Window seat, Radiator cover, Bookcases, Storage cabinets, Linen Cabinet, Woodworking, Armoires, Beds, Millwork, Wainscoting, Crown Mould, Coralite Woodworks, Fairfield County, Connecticut, Coralite, Woodworks" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.scrolly.min.js"></script>
@@ -24,6 +24,23 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-wide.css" />
 		</noscript>
+         <link rel="apple-touch-icon" sizes="57x57" href="images/Favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="images/Favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/Favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="images/Favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/Favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="images/Favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="images/Favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="images/Favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/Favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="images/Favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="images/Favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/Favicon/favicon-16x16.png">
+<link rel="manifest" href="images/Favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="images/Favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
 		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
@@ -36,7 +53,7 @@
 
 					<!-- Logo -->
 						<div id="logo">
-                        <img src="images/Coralite logo - Copy.png" width="250" height="65" alt=""/>
+                        <a href="index.html"><img src="images/Logo Brown.jpg" width="100%" height="" alt=""></a>
 						</div>
 
 					<!-- Nav -->
@@ -55,8 +72,8 @@
 							
 							-->
 							<ul>
-								<li><a href="index.html#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
-								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">Gallery</span></a></li>
+								<li><a href="index.html#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Design Portfolio</span></a></li>
+								<li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-picture-o">Gallery</span></a></li>
                                 <li><a href="" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-sitemap ">#</span></a></li>
 							</ul>
 						</nav>
@@ -67,11 +84,12 @@
 
 					<!-- Social Icons -->
 						<ul class="icons">
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+							<li><a href="https://www.facebook.com/pages/Coralite-Woodworks-Residential-Remodeling-and-Custom-Cabinetry/109644202410016" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="http://www.linkedin.com/pub/brian-matte/72/89/1a6" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+                            <li><a href="http://www.houzz.com/pro/coralite/coralite-woodworks-llc" class="icon fa-houzz"><span class="label">Houzz</span></a></li>
+                            <li><a href="https://plus.google.com/u/0/+CoraliteWoodworksLLCNewtown" class="icon fa-google-plus"><span class="label">Google</span></a></li>
+							<li><a href="mailto:coralitewoodworks@gmail.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                            <li><a href="tel://1-203-364-9600" class="icon fa-phone"><span class="label">Phone</span></a></li>
 						</ul>
 				
 				</div>
@@ -82,15 +100,9 @@
 			<div id="main">
 
 				<!-- About Me -->
-					<section id="about" class="three">
+			  <section id="about" class="three">
 					  <div class="container">
-					    <header>
-							  <!-- TemplateBeginEditable name="Gallery Name" -->
-                            <h2>
-                            Gallery Name
-                            </h2>
-							  <!-- TemplateEndEditable -->
-						  </header>
+
 						  <!-- TemplateBeginEditable name="Gallery" -->
 							<p>
                             
@@ -101,17 +113,22 @@
                             Descrption
                             </p>
 						  <!-- TemplateEndEditable -->
-						</div>
+				</div>
 					</section>
 			
 				<!-- Contact -->
+				<!-- TemplateBeginEditable name="Nav" -->
 					<section id="contact" class="four">
 						<div class="container">
 							<a href="#" class="button scrolly">Previous Gallery</a> 
                             <a href="#" class="button scrolly">Back to #</a>
-                          	<a href="#" class="button scrolly">Next Gallery</a></div>
-					</section>
-			
+                   	 		<a href="#" class="button scrolly">Next Gallery</a></div>
+			  <!-- TemplateEndEditable -->
+              </section>
+              <section id="nav" class="four">
+              <div class="container">
+              <a href="index.html#portfolio" class="button scrolly">Back to Design Portfolio</a></div>
+              </section>
 			</div>
 
 		<!-- Footer -->
@@ -119,10 +136,10 @@
 				
 				<!-- Copyright -->
 					<ul class="copyright">
-					  <li>&copy; 2014 Coralite Woodworks LLC, All rights reserved.</li>
-                      <li>9 Dusty Lane Unit 3 • Newtown CT 06470</li>
-                      <li>Office (203) 364-9600</li>
-                      <li>Cell (203) 943-8259</li>
+					  <li>&copy; 2015 Coralite Woodworks LLC, All rights reserved.</li>
+					  <li>9 Dusty Lane Unit 3 • Newtown CT 06470</li>
+                      <li>Office <a href="tel://1-203-364-9600">(203) 364-9600</a></li>
+                      <li>Cell <a href="tel://1-203-943-8259">(203) 943-8259</a></li>
 					</ul>
 				
 			</div>
