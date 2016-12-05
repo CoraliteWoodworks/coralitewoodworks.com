@@ -87,7 +87,7 @@ $JssorPlayer$["ytiframe"] = function (playerElement, playerInstanceElement) {
                 var optionString = ',"' + name + '":' + ToJson(optionValue);
                 command += optionString;
             });
-            command += '}'
+            command += '}';
             playerInstanceElement.contentWindow.postMessage(command, "*");
         }
     }

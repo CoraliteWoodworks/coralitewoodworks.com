@@ -1755,16 +1755,16 @@ var $Jssor$ = window.$Jssor$ = new function () {
         if (transition) {
             var flyDirection = transition.$FlyDirection;
 
-            if (flyDirection & 1) {
+            if (flyDirection && 1) {
                 transition.x = transition.$ScaleHorizontal || 1;
             }
-            if (flyDirection & 2) {
+            if (flyDirection && 2) {
                 transition.x = -transition.$ScaleHorizontal || -1;
             }
-            if (flyDirection & 4) {
+            if (flyDirection && 4) {
                 transition.y = transition.$ScaleVertical || 1;
             }
-            if (flyDirection & 8) {
+            if (flyDirection && 8) {
                 transition.y = -transition.$ScaleVertical || -1;
             }
 
@@ -2590,7 +2590,7 @@ $JssorAnimator$ = function (delay, duration, options, elmt, fromStyles, toStyles
     function PlayToPosition(toPosition, callback, noStop) {
         if (!_AutoPlay) {
             _AutoPlay = true;
-            _NoStop = noStop
+            _NoStop = noStop;
             _Callback = callback;
             toPosition = Math.max(toPosition, _Position_OuterBegin);
             toPosition = Math.min(toPosition, _Position_OuterEnd);

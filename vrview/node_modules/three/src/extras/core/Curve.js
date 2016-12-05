@@ -264,7 +264,7 @@ THREE.Curve.prototype = {
 
 	}
 
-}
+};
 
 THREE.Curve.Utils = THREE.CurveUtils; // backwards compatibility
 
