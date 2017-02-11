@@ -83,7 +83,7 @@
 
         <!-- Logo -->
         <div id="logo">
-            <a href="index.html"><img src="images/Logo Brown.jpg" width="100%" height="" alt=""></a>
+            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height="" alt=""></a>
         </div>
 
         <!-- Nav -->
@@ -107,7 +107,7 @@
                 <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-picture-o">Gallery</span></a>
                 </li>
                 <li><a href="{{ url_for(portfolio.lower()) }}" id="about-link" class="skel-layers-ignoreHref"><span
-                        class="icon fa-sitemap ">{{ portfolio }}</span></a></li>
+                        class="icon fa-sitemap ">{{ portfolioFull }}</span></a></li>
             </ul>
         </nav>
 
@@ -124,8 +124,6 @@
                     class="label">Linkedin</span></a></li>
             <li><a href="http://www.houzz.com/pro/coralite/coralite-woodworks-llc" class="icon fa-houzz"><span
                     class="label">Houzz</span></a></li>
-            <li><a href="https://plus.google.com/u/0/+CoraliteWoodworksLLCNewtown" class="icon fa-google-plus"><span
-                    class="label">Google</span></a></li>
             <li><a href="mailto:coralitewoodworks@gmail.com" class="icon fa-envelope"><span
                     class="label">Email</span></a></li>
             <li><a href="tel://1-203-364-9600" class="icon fa-phone"><span class="label">Phone</span></a></li>
@@ -144,10 +142,10 @@
 
             <!-- TemplateBeginEditable name="Gallery" -->
             <p>
-            <div id="{{ galleryId }}">...</div>
+            <div id="{{ gallery_id }}">...</div>
             <script type="text/javascript">
                 var cpo = [];
-                cpo["_object"] = "{{ galleryId }}";
+                cpo["_object"] = "{{ gallery_id }}";
                 cpo["_fid"] = "{{ cpo }}";
                 var _cpmp = _cpmp || [];
                 _cpmp.push(cpo);
@@ -173,7 +171,7 @@
             {% if id != 1 %}
                 <a href="{{ id - 1 }}" class="button scrolly">Previous Gallery</a>
             {% endif %}
-            <a href="{{ url_for(portfolio.lower()) }}" class="button scrolly">Back to {{ portfolio }}</a>
+            <a href="{{ url_for(portfolio.lower()) }}" class="button scrolly">Back to {{ portfolioFull }}</a>
             {% if id != row %}
             <a href="{{ id + 1 }}" class="button scrolly">Next Gallery</a></div>
             {% endif %}
