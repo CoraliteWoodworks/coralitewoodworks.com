@@ -174,7 +174,7 @@
             <div class="row">
                 <div class="4u">
                     <article class="item">
-                        <a href="Additions.html" class="image fit"><img
+                        <a href="{{ url_for('additions') }}" class="image fit"><img
                                 src="{{ url_for('static', filename='images/Design Portfolio Photos/Additions.jpg') }}"/></a>
                         <header>
                             <h3>Additions &amp; Renovations</h3>
@@ -196,7 +196,7 @@
                     </article>
                     <article class="item">
                         <a href="Paneling.html" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/Paneling.jpg"
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Paneling.jpg') }}"
                                 alt=""/></a>
                         <header>
                             <h3>Paneling &amp; Wainscoting</h3>
@@ -205,7 +205,7 @@
                 </div>
                 <div class="4u">
                     <article class="item">
-                        <a href="Basements.html" class="image fit"><img
+                        <a href="{{ url_for('basements') }}" class="image fit"><img
                                 src="static/images/Design Portfolio Photos/Basements.jpg" alt=""/></a>
                         <header>
                             <h3>Basements</h3>
