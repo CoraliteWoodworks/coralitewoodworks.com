@@ -26,26 +26,40 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style-wide.css') }}"/>
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='images/Favicon/apple-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/Favicon/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='images/Favicon/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/Favicon/apple-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/Favicon/apple-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/Favicon/apple-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/Favicon/apple-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/Favicon/apple-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/Favicon/apple-icon-180x180.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/Favicon/android-icon-192x192.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/Favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/Favicon/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/Favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="{{ url_for('static', filename='images/Favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="{{ url_for('static', filename='images/Favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96"
+          href="{{ url_for('static', filename='images/Favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="{{ url_for('static', filename='images/Favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='images/Favicon/manifest.json') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/Favicon/ms-icon-144x144.png') }}">
+    <meta name="msapplication-TileImage"
+          content="{{ url_for('static', filename='images/Favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="{{ url_for('static', filename='css/ie/html5shiv.js') }}"></script><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v9.css') }}" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v8.css') }}" /><![endif]-->
 
     <!--Tracking Code-->
     <script>
@@ -88,7 +102,8 @@
 
         <!-- Logo -->
         <div id="logo">
-            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height="" alt=""></a>
+            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
+                                                 width="100%" height="" alt=""></a>
         </div>
 
         <!-- Nav -->
@@ -195,7 +210,7 @@
                         </header>
                     </article>
                     <article class="item">
-                        <a href="Paneling.html" class="image fit"><img
+                        <a href="{{ url_for('paneling') }}" class="image fit"><img
                                 src="{{ url_for('static', filename='images/Design Portfolio Photos/Paneling.jpg') }}"
                                 alt=""/></a>
                         <header>
@@ -206,36 +221,36 @@
                 <div class="4u">
                     <article class="item">
                         <a href="{{ url_for('basements') }}" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/Basements.jpg" alt=""/></a>
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Basements.jpg') }}" alt=""/></a>
                         <header>
                             <h3>Basements</h3>
                         </header>
                     </article>
                     <article class="item">
                         <a href="{{ url_for('decks') }}" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/Decks.jpg"
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Decks.jpg') }}"
                                 alt=""/></a>
                         <header>
                             <h3>Decks &amp; Porches</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="Mantels.html" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/Mantels.jpg"
+                        <a href="{{ url_for('mantels') }}" class="image fit"><img
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Mantels.jpg') }}"
                                 alt=""/></a>
                         <header>
                             <h3>Mantels</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="TV.html" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/TV Entertainment.jpg" alt=""/></a>
+                        <a href="{{ url_for('tv') }}" class="image fit"><img
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/TV Entertainment.jpg') }}" alt=""/></a>
                         <header>
                             <h3>TV Entertainment Centers</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="Stock.html" class="image fit"><img
+                        <a href="{{ url_for('stock') }}" class="image fit"><img
                                 src="static/images/Design Portfolio Photos/Stock Cabinets.jpg" alt=""/></a>
                         <header>
                             <h3>Stock Cabinets</h3>
@@ -244,31 +259,32 @@
                 </div>
                 <div class="4u">
                     <article class="item">
-                        <a href="Bathrooms.html" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/Bathrooms.jpg" alt=""/></a>
+                        <a href="{{ url_for('bathrooms') }}" class="image fit"><img
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Bathrooms.jpg') }}" alt=""/></a>
                         <header>
                             <h3>Bathrooms &amp; Vanities </h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="Offices.html" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/Offices.jpg"
+                        <a href="{{ url_for('offices') }}" class="image fit"><img
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Offices.jpg') }}"
                                 alt=""/></a>
                         <header>
                             <h3>Desks &amp; Offices</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="Mudrooms.html" class="image fit"><img
-                                src="static/images/Design Portfolio Photos/Mudrooms.jpg"
+                        <a href="{{ url_for('mudrooms') }}" class="image fit"><img
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Mudrooms.jpg') }}"
                                 alt=""/></a>
                         <header>
                             <h3>Mudrooms & Closets</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="Bars.html" class="image fit"><img src="static/images/Design Portfolio Photos/Bars.jpg"
-                                                                   alt=""/></a>
+                        <a href="{{ url_for('bars') }}" class="image fit"><img
+                                src="{{ url_for('static', filename='images/Design Portfolio Photos/Bars.jpg') }}"
+                                alt=""/></a>
                         <header>
                             <h3>Bars &amp; Wine Storage</h3>
                         </header>

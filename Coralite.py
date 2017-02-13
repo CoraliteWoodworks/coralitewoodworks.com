@@ -1,7 +1,5 @@
-from flask import Flask
 from flask import render_template
-from Database import Additions, Basements, Builtins, Decks, Kitchens
-from Database import db
+from Database import *
 
 app = Flask(__name__)
 
@@ -38,10 +36,22 @@ def additions(n):
     return show(n, Additions, 'additions', 'Additions & Renovations')
 
 
+@app.route('/bars', methods=['GET'], defaults={'n': 0})
+@app.route('/bars/<n>', methods=['GET'])
+def bars(n):
+    return show(n, Bars, 'bars', 'Bars & Wine Storage')
+
+
 @app.route('/basements', methods=['GET'], defaults={'n': 0})
 @app.route('/basements/<n>', methods=['GET'])
 def basements(n):
     return show(n, Basements, 'basements', 'Basements')
+
+
+@app.route('/bathrooms', methods=['GET'], defaults={'n': 0})
+@app.route('/bathrooms/<n>', methods=['GET'])
+def bathrooms(n):
+    return show(n, Bathrooms, 'bathrooms', 'Bathrooms & Vanities')
 
 
 @app.route('/builtins', methods=['GET'], defaults={'n': 0})
@@ -60,6 +70,42 @@ def decks(n):
 @app.route('/kitchens/<n>', methods=['GET'])
 def kitchens(n):
     return show(n, Kitchens, 'kitchens', 'Kitchens')
+
+
+@app.route('/mantels', methods=['GET'], defaults={'n': 0})
+@app.route('/mantels/<n>', methods=['GET'])
+def mantels(n):
+    return show(n, Mantels, 'mantels', 'Mantels')
+
+
+@app.route('/mudrooms', methods=['GET'], defaults={'n': 0})
+@app.route('/mudrooms/<n>', methods=['GET'])
+def mudrooms(n):
+    return show(n, Mudrooms, 'mudrooms', 'Mudrooms & Closets')
+
+
+@app.route('/offices', methods=['GET'], defaults={'n': 0})
+@app.route('/offices/<n>', methods=['GET'])
+def offices(n):
+    return show(n, Offices, 'offices', 'Desks & Offices')
+
+
+@app.route('/paneling', methods=['GET'], defaults={'n': 0})
+@app.route('/paneling/<n>', methods=['GET'])
+def paneling(n):
+    return show(n, Paneling, 'paneling', 'Paneling & Wainscoting')
+
+
+@app.route('/stock', methods=['GET'], defaults={'n': 0})
+@app.route('/stock/<n>', methods=['GET'])
+def stock(n):
+    return show(n, Stock, 'stock', 'Stock Cabinets')
+
+
+@app.route('/tv', methods=['GET'], defaults={'n': 0})
+@app.route('/tv/<n>', methods=['GET'])
+def tv(n):
+    return show(n, TV, 'tv', 'TV Entertainment Centers')
 
 
 if __name__ == "__main__":

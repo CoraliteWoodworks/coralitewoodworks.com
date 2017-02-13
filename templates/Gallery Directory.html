@@ -54,9 +54,9 @@
     <meta name="msapplication-TileImage"
           content="{{ url_for('static', filename='images/Favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="{{ url_for('static', filename='css/ie/html5shiv.js') }}"></script><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v9.css') }}" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v8.css') }}" /><![endif]-->
     <!--Tracking Code-->
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -97,7 +97,8 @@
 
         <!-- Logo -->
         <div id="logo">
-            <a href=" {{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height="" alt=""></a>
+            <a href=" {{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
+                                                  width="100%" height="" alt=""></a>
         </div>
 
         <!-- Nav -->

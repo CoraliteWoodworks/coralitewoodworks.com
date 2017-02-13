@@ -23,26 +23,40 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style-wide.css') }}"/>
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='images/Favicon/apple-icon-57x57.png') }}">
-    <link rel="apple-touch-icon" sizes="60x60" href="{{ url_for('static', filename='images/Favicon/apple-icon-60x60.png') }}">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='images/Favicon/apple-icon-72x72.png') }}">
-    <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static', filename='images/Favicon/apple-icon-76x76.png') }}">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='images/Favicon/apple-icon-114x114.png') }}">
-    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='images/Favicon/apple-icon-120x120.png') }}">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='images/Favicon/apple-icon-144x144.png') }}">
-    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='images/Favicon/apple-icon-152x152.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/Favicon/apple-icon-180x180.png') }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='images/Favicon/android-icon-192x192.png') }}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/Favicon/favicon-32x32.png') }}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{{ url_for('static', filename='images/Favicon/favicon-96x96.png') }}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/Favicon/favicon-16x16.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="{{ url_for('static', filename='images/Favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="{{ url_for('static', filename='images/Favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96"
+          href="{{ url_for('static', filename='images/Favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="{{ url_for('static', filename='images/Favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ url_for('static', filename='images/Favicon/manifest.json') }}">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/Favicon/ms-icon-144x144.png') }}">
+    <meta name="msapplication-TileImage"
+          content="{{ url_for('static', filename='images/Favicon/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
-    <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 8]><script src="{{ url_for('static', filename='css/ie/html5shiv.js') }}"></script><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v9.css') }}" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v8.css') }}" /><![endif]-->
     <!--Tracking Code-->
     <script>
         (function (i, s, o, g, r, a, m) {
@@ -83,7 +97,8 @@
 
         <!-- Logo -->
         <div id="logo">
-            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height="" alt=""></a>
+            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
+                                                 width="100%" height="" alt=""></a>
         </div>
 
         <!-- Nav -->
@@ -173,7 +188,7 @@
             {% endif %}
             <a href="{{ url_for(portfolio.lower()) }}" class="button scrolly">Back to {{ portfolioFull }}</a>
             {% if id != row %}
-            <a href="{{ id + 1 }}" class="button scrolly">Next Gallery</a></div>
+                <a href="{{ id + 1 }}" class="button scrolly">Next Gallery</a></div>
             {% endif %}
     </section>
     <section id="nav" class="four">
