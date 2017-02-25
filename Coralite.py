@@ -30,6 +30,11 @@ def show(n, Class, portfolio, portfolio_full):
                                gallery_id=gallery_id, cpo=cpo, row=row)
 
 
+@app.route('/testimonials')
+def testimonials():
+    return render_template('testimonials.html')
+
+
 @app.route('/additions', methods=['GET'], defaults={'n': 0})
 @app.route('/additions/<n>', methods=['GET'])
 def additions(n):
