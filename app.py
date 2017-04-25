@@ -1,6 +1,6 @@
 from flask import render_template
 
-from Coralite.__init__ import *
+from Coralite import *
 
 
 @app.route('/')
@@ -114,4 +114,4 @@ def tv(n):
 
 if __name__ == "__main__":
     db.create_all()
-    app.run(host="127.0.0.1", port="8080")
+    app.run(host="0.0.0.0")
