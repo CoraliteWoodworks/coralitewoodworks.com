@@ -1,7 +1,6 @@
 from flask import render_template
-from Database import *
 
-app = Flask(__name__)
+from Coralite.__init__ import *
 
 
 @app.route('/')
