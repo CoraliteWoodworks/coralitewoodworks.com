@@ -1,4 +1,2 @@
 Flask
 flask_sqlalchemy
-uwsgi
-gunicorn
