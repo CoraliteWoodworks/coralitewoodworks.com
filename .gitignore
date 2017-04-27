@@ -2,3 +2,4 @@
 .idea/*
 .idea
 config.*
+__pycache__/
