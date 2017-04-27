@@ -1,4 +1,2 @@
-import os
-
 password = ''
 ip = ''
