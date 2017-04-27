@@ -29,9 +29,22 @@ def show(n, Class, portfolio, portfolio_full):
                                gallery_id=gallery_id, cpo=cpo, row=row)
 
 
-@app.route('/testimonials')
-def testimonials():
-    return render_template('testimonials.html')
+@app.route('/testimonials', methods=['GET'], defaults={'n': 0})
+def testimonials(n):
+    row = Testimonials.query.count()
+    content = []
+    for num in range(1, row + 1):
+        data = Testimonials.query.filter_by(id=num).first()
+        content.append(Testimonials.get_content(data))
+    source = []
+    for num in range(1, row + 1):
+        data = Testimonials.query.filter_by(id=num).first()
+        source.append(Testimonials.get_source(data))
+    link = []
+    for num in range(1, row + 1):
+        data = Testimonials.query.filter_by(id=num).first()
+        link.append(Testimonials.get_link(data))
+    return render_template('testimonials.html', content=content, id=int(n), source=source, link=link, row=row)
 
 
 @app.route('/additions', methods=['GET'], defaults={'n': 0})

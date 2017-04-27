@@ -6,6 +6,34 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///../db.sqlite3'
 db = SQLAlchemy(app)
 
 
+class Testimonials(db.Model):
+    __tablename__ = 'testimonials'
+    id = db.Column('id', db.Integer, primary_key=True)
+    content = db.Column('content', db.String(length=10000))
+    source = db.Column('source', db.String(length=128))
+    link = db.Column('link', db.String(length=256))
+
+    def __init__(self, content, source, link):
+        self.content = content
+        self.source = source
+        self.link = link
+
+    def __repr__(self):
+        return '<Testimonial %r>' % self.link
+
+    def get_content(self):
+        if self.content is not None:
+            return self.content
+        else:
+            return ""
+
+    def get_source(self):
+        return self.source
+
+    def get_link(self):
+        return self.link
+
+
 class Additions(db.Model):
     __tablename__ = 'additions'
     id = db.Column('id', db.Integer, primary_key=True)
