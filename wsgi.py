@@ -29,8 +29,8 @@ def show(n, Class, portfolio, portfolio_full):
                                gallery_id=gallery_id, cpo=cpo, row=row)
 
 
-@app.route('/testimonials', methods=['GET'], defaults={'n': 0})
-def testimonials(n):
+@app.route('/testimonials')
+def testimonials():
     row = Testimonials.query.count()
     content = []
     for num in range(1, row + 1):
@@ -44,7 +44,7 @@ def testimonials(n):
     for num in range(1, row + 1):
         data = Testimonials.query.filter_by(id=num).first()
         link.append(Testimonials.get_link(data))
-    return render_template('testimonials.html', content=content, id=int(n), source=source, link=link, row=row)
+    return render_template('testimonials.html', content=content, source=source, link=link, row=row)
 
 
 @app.route('/additions', methods=['GET'], defaults={'n': 0})
