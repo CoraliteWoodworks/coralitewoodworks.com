@@ -131,22 +131,37 @@ def tv(n):
 def test(n):
     from os import listdir
     from os.path import isfile, join
-    onlyfiles = [f for f in listdir("Coralite/static/images/test/1") if
-                 isfile(join("Coralite/static/images/test/1", f))]
-    print(len(onlyfiles))
-    filedims = []
-    for photo in onlyfiles:
-        im = Image.open("Coralite/static/images/test/1/" + photo)
-        filedims.append(im)
 
     row = TEST.query.count()
     if int(n) is 0:
         description = []
+        onlyfiles = [['']] * row
+        filedims = [[Image.open("Coralite/static/images/Logo Brown.jpg")]] * row
+        items = [[{}]]
         for num in range(1, row + 1):
             data = TEST.query.filter_by(id=num).first()
             description.append(TEST.get_description(data))
-        return render_template('Gallery Directory.html', portfolio="test", portfolioFull="Testing",
-                               row=row, description=description)
+
+            for f in listdir("Coralite/static/images/test/" + str(num)):
+                if isfile(join("Coralite/static/images/test/" + str(num), f)):
+                    onlyfiles[num - 1].append(url_for('static', filename = join("images/test/" + str(num), f)))
+            onlyfiles[num - 1].remove('')
+            for photo in onlyfiles[num - 1]:
+                im = Image.open("Coralite/" + photo)
+                filedims[num - 1].append(im)
+            filedims[num - 1].pop(0)
+            for i in range(0, len(onlyfiles[num - 1])):
+                items[num - 1].append({
+                    'src': onlyfiles[num - 1][i],
+                    'w': filedims[num - 1][i].width,
+                    'h': filedims[num - 1][i].height
+                })
+            items[num - 1].pop(0)
+
+            print(items)
+
+        return render_template('Test Directory.html', portfolio="test", portfolioFull="Testing",
+                               row=row, description=description, items=items[0])
     elif int(n) >= 1:
         data = TEST.query.filter_by(id=n).first()
         description = TEST.get_description(data)
