@@ -1,3 +1,4 @@
+pillow
 Flask
 flask_sqlalchemy
 uwsgi
