@@ -1,0 +1,781 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+    <title>Coralite Woodworks | {{ portfolioFull }}</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="description"
+          content="Coralite Woodworks specialize in residential remodeling, custom kitchens, master bedrooms, designer bathrooms, second stories and room additions. Coralite Woodworks is a full service Design-Build Company with custom cabinet and trim manufacturing facility. Now also offering more options with our new Stock Cabinets and Semi-Custom lines."/>
+    <meta name="keywords"
+          content="Carpentry, Design build, Remodeling, Cabinets, Custom Cabinets, Cabinetry, Kitchen Cabinets, Custom Kitchen Cabinets, Additions, remodels, Home Improvement, Wood cabinets, Entertainment centers, trim work, tile work, bathroom renovation, bathroom remodel, kitchen remodel, kitchen renovation, Restoration, second story addition, garage addition, pool house, TV Cabinet, Entertainment unit, Woodworker, Cabinetmaker, Home remodel, Carpenter, Medicine Cabinets, Vanity Mirrors, Custom Vanities, Bathroom Vanity, Built-in Cabinets, Mantels, Custom Furniture, Wine storage Cabinets, Window seat, Radiator cover, Bookcases, Storage cabinets, Linen Cabinet, Woodworking, Armoires, Beds, Millwork, Wainscoting, Crown Mould, Coralite Woodworks, Fairfield County, Connecticut, Coralite, Woodworks"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-wide.css') }}"/>
+    <style>
+        .my-gallery {
+            width: 100%;
+            float: left;
+        }
+
+        .my-gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        .my-gallery figure {
+            display: block;
+            float: left;
+            margin: 0 5px 5px 0;
+            width: 150px;
+        }
+
+        .my-gallery figcaption {
+            display: none;
+        }
+
+        div.my-gallery {
+            float: left;
+        }
+
+        figure.my-gallery {
+            float: left;
+        }
+
+    </style>
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/photoswipe.css') }}">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+         In the folder of skin CSS file there are also:
+         - .png and .svg icons sprite,
+         - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/default-skin.css') }}">
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-57x57.png') }}">
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-60x60.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-72x72.png') }}">
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-76x76.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-114x114.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-120x120.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-144x144.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-152x152.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="{{ url_for('static', filename='images/Favicon/apple-icon-180x180.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="{{ url_for('static', filename='images/Favicon/android-icon-192x192.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="{{ url_for('static', filename='images/Favicon/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="96x96"
+          href="{{ url_for('static', filename='images/Favicon/favicon-96x96.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="{{ url_for('static', filename='images/Favicon/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/Favicon/manifest.json') }}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage"
+          content="{{ url_for('static', filename='images/Favicon/ms-icon-144x144.png') }}">
+    <meta name="theme-color" content="#ffffff">
+    <!--[if lte IE 8]><script src="{{ url_for('static', filename='css/ie/html5shiv.js') }}"></script><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v9.css') }}" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v8.css') }}" /><![endif]-->
+    <!--Tracking Code-->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-75473640-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        var _prum = [
+            ['id', '56f2a03fabe53d0436c4cd1c'],
+            ['mark', 'firstbyte', (new Date()).getTime()]
+        ];
+        (function () {
+            var s = document.getElementsByTagName('script')[0],
+                p = document.createElement('script');
+            p.async = 'async';
+            p.src = '//rum-static.pingdom.net/prum.min.js';
+            s.parentNode.insertBefore(p, s);
+        })();
+    </script>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header" class="skel-layers-fixed">
+
+    <div class="top">
+
+        <!-- Logo -->
+        <div id="logo">
+            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
+                                                 width="100%" height="" alt=""></a>
+        </div>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <!--
+
+                Prologue's nav expects links in one of two formats:
+
+                1. Hash link (scrolls to a different section within the page)
+
+                   <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+                2. Standard link (sends the user to another page/site)
+
+                   <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+            -->
+            <ul>
+                <li><a href="{{ url_for('main') }}#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span
+                        class="icon fa-th">Design Portfolio</span></a></li>
+                <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-picture-o">Gallery</span></a>
+                </li>
+                <li><a href="{{ url_for(portfolio.lower()) }}" id="about-link" class="skel-layers-ignoreHref"><span
+                        class="icon fa-sitemap ">{{ portfolioFull }}</span></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="bottom">
+
+        <!-- Social Icons -->
+        <ul class="icons">
+            <li>
+                <a href="https://www.facebook.com/pages/Coralite-Woodworks-Residential-Remodeling-and-Custom-Cabinetry/109644202410016"
+                   class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="http://www.linkedin.com/pub/brian-matte/72/89/1a6" class="icon fa-linkedin"><span
+                    class="label">Linkedin</span></a></li>
+            <li><a href="http://www.houzz.com/pro/coralite/coralite-woodworks-llc" class="icon fa-houzz"><span
+                    class="label">Houzz</span></a></li>
+            <li><a href="mailto:coralitewoodworks@gmail.com" class="icon fa-envelope"><span
+                    class="label">Email</span></a></li>
+            <li><a href="tel://1-203-364-9600" class="icon fa-phone"><span class="label">Phone</span></a></li>
+        </ul>
+
+    </div>
+
+</div>
+
+<!-- Main -->
+<div id="main">
+
+    <!-- About Me -->
+    <section id="about" class="three">
+        <div class="container">
+
+            <div class="my-gallery row" itemscope itemtype="http://schema.org/ImageGallery">
+                {% for number in range(0, size) %}
+                    <figure class="my-gallery" itemprop="associatedMedia" itemscope
+                            itemtype="http://schema.org/ImageObject">
+                        <a href="{{ url_for('static', filename="images/" ~ portfolio ~ "/" ~ id ~ "/" ~ files[number]) }}"
+                           itemprop="contentUrl"
+                           data-size="{{ ((filedims[number]).width) }}x{{ ((filedims[number]).height) }}"
+                           class="middle-img image fit">
+                            <img src="{{ url_for('static', filename="images/" ~ portfolio ~ "/" ~ id ~ "/" ~ files[number]) }}"
+                                 itemprop="thumbnail" alt="Image description"/>
+                        </a>
+                    </figure>
+                {% endfor %}
+            </div>
+
+            <!-- TemplateEndEditable -->
+            <p>
+                {{ description }}
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="four">
+        <div class="container">
+            {% if id != 1 %}
+                <a href="{{ id - 1 }}" class="button scrolly">Previous Gallery</a>
+            {% endif %}
+            <a href="{{ url_for(portfolio.lower()) }}" class="button scrolly">Back to {{ portfolioFull }}</a>
+            {% if id != row %}
+                <a href="{{ id + 1 }}" class="button scrolly">Next Gallery</a></div>
+            {% endif %}
+    </section>
+    <section id="nav" class="four">
+        <div class="container">
+            <a href="{{ url_for('main') }}#portfolio" class="button scrolly">Back to Design Portfolio</a></div>
+    </section>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+
+    <!-- Copyright -->
+    <ul class="copyright">
+        <li>&copy; 2017 Coralite Woodworks LLC, All rights reserved.</li>
+        <li>9 Dusty Lane Unit 3 • Newtown CT 06470</li>
+        <li>Office <a href="tel://1-203-364-9600">(203) 364-9600</a></li>
+        <li>Cell <a href="tel://1-203-943-8259">(203) 943-8259</a></li>
+    </ul>
+
+</div>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe.
+         It's a separate element, as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
+        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrolly.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.scrollzer.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/skel-layers.min.js') }}"></script>
+<script>
+    (function ($) {
+
+        skel.init({
+            reset: 'full',
+            breakpoints: {
+                'global': {
+                    range: '*',
+                    href: '{{ url_for('static', filename='css/style.css') }}',
+                    containers: 1400,
+                    grid: {gutters: 40},
+                    viewport: {scalable: false}
+                },
+                'wide': {
+                    range: '961-1880',
+                    href: '{{ url_for('static', filename='css/style-wide.css') }}',
+                    containers: 1200,
+                    grid: {gutters: 40}
+                },
+                'normal': {
+                    range: '961-1620',
+                    href: '{{ url_for('static', filename='css/style-normal.css') }}',
+                    containers: 960,
+                    grid: {gutters: 40}
+                },
+                'narrow': {
+                    range: '961-1320',
+                    href: '{{ url_for('static', filename='css/style-narrow.css') }}',
+                    containers: '100%',
+                    grid: {gutters: 20}
+                },
+                'narrower': {
+                    range: '0-960',
+                    href: '{{ url_for('static', filename='css/style-narrower.css') }}',
+                    containers: '100%',
+                    grid: {gutters: 15}
+                },
+                'mobile': {
+                    range: '0-736',
+                    href: '{{ url_for('static', filename='css/style-mobile.css') }}',
+                    grid: {collapse: true}
+                }
+            },
+            plugins: {
+                layers: {
+                    sidePanel: {
+                        hidden: true,
+                        breakpoints: 'narrower',
+                        position: 'top-left',
+                        side: 'left',
+                        animation: 'pushX',
+                        width: 240,
+                        height: '100%',
+                        clickToHide: true,
+                        html: '<div data-action="moveElement" data-args="header"></div>',
+                        orientation: 'vertical'
+                    },
+                    sidePanelToggle: {
+                        breakpoints: 'narrower',
+                        position: 'top-left',
+                        side: 'top',
+                        height: '4em',
+                        width: '5em',
+                        html: '<div data-action="toggleLayer" data-args="sidePanel" class="toggle"></div>'
+                    }
+                }
+            }
+        });
+
+        $(function () {
+
+            var $window = $(window),
+                $body = $('body');
+
+            // Disable animations/transitions until the page has loaded.
+            $body.addClass('is-loading');
+
+            $window.on('load', function () {
+                $body.removeClass('is-loading');
+            });
+
+            // CSS polyfills (IE<9).
+            if (skel.vars.IEVersion < 9)
+                $(':last-child').addClass('last-child');
+
+            // Forms (IE<10).
+            var $form = $('form');
+            if ($form.length > 0) {
+
+                $form.find('.form-button-submit')
+                    .on('click', function () {
+                        $(this).parents('form').submit();
+                        return false;
+                    });
+
+                if (skel.vars.IEVersion < 10) {
+                    $.fn.n33_formerize = function () {
+                        var _fakes = new Array(), _form = $(this);
+                        _form.find('input[type=text],textarea').each(function () {
+                            var e = $(this);
+                            if (e.val() == '' || e.val() == e.attr('placeholder')) {
+                                e.addClass('formerize-placeholder');
+                                e.val(e.attr('placeholder'));
+                            }
+                        }).blur(function () {
+                            var e = $(this);
+                            if (e.attr('name').match(/_fakeformerizefield$/)) return;
+                            if (e.val() == '') {
+                                e.addClass('formerize-placeholder');
+                                e.val(e.attr('placeholder'));
+                            }
+                        }).focus(function () {
+                            var e = $(this);
+                            if (e.attr('name').match(/_fakeformerizefield$/)) return;
+                            if (e.val() == e.attr('placeholder')) {
+                                e.removeClass('formerize-placeholder');
+                                e.val('');
+                            }
+                        });
+                        _form.find('input[type=password]').each(function () {
+                            var e = $(this);
+                            var x = $($('<div>').append(e.clone()).remove().html().replace(/type="password"/i, 'type="text"').replace(/type=password/i, 'type=text'));
+                            if (e.attr('id') != '') x.attr('id', e.attr('id') + '_fakeformerizefield');
+                            if (e.attr('name') != '') x.attr('name', e.attr('name') + '_fakeformerizefield');
+                            x.addClass('formerize-placeholder').val(x.attr('placeholder')).insertAfter(e);
+                            if (e.val() == '') e.hide(); else x.hide();
+                            e.blur(function (event) {
+                                event.preventDefault();
+                                var e = $(this);
+                                var x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]');
+                                if (e.val() == '') {
+                                    e.hide();
+                                    x.show();
+                                }
+                            });
+                            x.focus(function (event) {
+                                event.preventDefault();
+                                var x = $(this);
+                                var e = x.parent().find('input[name=' + x.attr('name').replace('_fakeformerizefield', '') + ']');
+                                x.hide();
+                                e.show().focus();
+                            });
+                            x.keypress(function (event) {
+                                event.preventDefault();
+                                x.val('');
+                            });
+                        });
+                        _form.submit(function () {
+                            $(this).find('input[type=text],input[type=password],textarea').each(function (event) {
+                                var e = $(this);
+                                if (e.attr('name').match(/_fakeformerizefield$/)) e.attr('name', '');
+                                if (e.val() == e.attr('placeholder')) {
+                                    e.removeClass('formerize-placeholder');
+                                    e.val('');
+                                }
+                            });
+                        }).bind("reset", function (event) {
+                            event.preventDefault();
+                            $(this).find('select').val($('option:first').val());
+                            $(this).find('input,textarea').each(function () {
+                                var e = $(this);
+                                var x;
+                                e.removeClass('formerize-placeholder');
+                                switch (this.type) {
+                                    case 'submit':
+                                    case 'reset':
+                                        break;
+                                    case 'password':
+                                        e.val(e.attr('defaultValue'));
+                                        x = e.parent().find('input[name=' + e.attr('name') + '_fakeformerizefield]');
+                                        if (e.val() == '') {
+                                            e.hide();
+                                            x.show();
+                                        } else {
+                                            e.show();
+                                            x.hide();
+                                        }
+                                        break;
+                                    case 'checkbox':
+                                    case 'radio':
+                                        e.attr('checked', e.attr('defaultValue'));
+                                        break;
+                                    case 'text':
+                                    case 'textarea':
+                                        e.val(e.attr('defaultValue'));
+                                        if (e.val() == '') {
+                                            e.addClass('formerize-placeholder');
+                                            e.val(e.attr('placeholder'));
+                                        }
+                                        break;
+                                    default:
+                                        e.val(e.attr('defaultValue'));
+                                        break;
+                                }
+                            });
+                            window.setTimeout(function () {
+                                for (x in _fakes) _fakes[x].trigger('formerize_sync');
+                            }, 10);
+                        });
+                        return _form;
+                    };
+                    $form.n33_formerize();
+                }
+
+            }
+
+            // Scrolly links.
+            $('.scrolly').scrolly();
+
+            // Nav.
+            var $nav_a = $('#nav a');
+
+            // Scrolly-fy links.
+            $nav_a
+                .scrolly()
+                .on('click', function (e) {
+
+                    var t = $(this),
+                        href = t.attr('href');
+
+                    if (href[0] != '#')
+                        return;
+
+                    e.preventDefault();
+
+                    // Clear active and lock scrollzer until scrolling has stopped
+                    $nav_a
+                        .removeClass('active')
+                        .addClass('scrollzer-locked');
+
+                    // Set this link to active
+                    t.addClass('active');
+
+                });
+
+            // Initialize scrollzer.
+            var ids = [];
+
+            $nav_a.each(function () {
+
+                var href = $(this).attr('href');
+
+                if (href[0] != '#')
+                    return;
+
+                ids.push(href.substring(1));
+
+            });
+
+            $.scrollzer(ids, {pad: 200, lastHack: true});
+
+        });
+
+    })(jQuery);
+</script>
+<script>
+    var initPhotoSwipeFromDOM = function (gallerySelector) {
+
+        // parse slide data (url, title, size ...) from DOM elements
+        // (children of gallerySelector)
+        var parseThumbnailElements = function (el) {
+            var thumbElements = el.childNodes,
+                numNodes = thumbElements.length,
+                items = [],
+                figureEl,
+                linkEl,
+                size,
+                item;
+
+            for (var i = 0; i < numNodes; i++) {
+
+                figureEl = thumbElements[i]; // <figure> element
+
+                // include only element nodes
+                if (figureEl.nodeType !== 1) {
+                    continue;
+                }
+
+                linkEl = figureEl.children[0]; // <a> element
+
+                size = linkEl.getAttribute('data-size').split('x');
+
+                // create slide object
+                item = {
+                    src: linkEl.getAttribute('href'),
+                    w: parseInt(size[0], 10),
+                    h: parseInt(size[1], 10)
+                };
+
+
+                if (figureEl.children.length > 1) {
+                    // <figcaption> content
+                    item.title = figureEl.children[1].innerHTML;
+                }
+
+                if (linkEl.children.length > 0) {
+                    // <img> thumbnail element, retrieving thumbnail url
+                    item.msrc = linkEl.children[0].getAttribute('src');
+                }
+
+                item.el = figureEl; // save link to element for getThumbBoundsFn
+                items.push(item);
+            }
+
+            return items;
+        };
+
+        // find nearest parent element
+        var closest = function closest(el, fn) {
+            return el && ( fn(el) ? el : closest(el.parentNode, fn) );
+        };
+
+        // triggers when user clicks on thumbnail
+        var onThumbnailsClick = function (e) {
+            e = e || window.event;
+            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+            var eTarget = e.target || e.srcElement;
+
+            // find root element of slide
+            var clickedListItem = closest(eTarget, function (el) {
+                return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
+            });
+
+            if (!clickedListItem) {
+                return;
+            }
+
+            // find index of clicked item by looping through all child nodes
+            // alternatively, you may define index via data- attribute
+            var clickedGallery = clickedListItem.parentNode,
+                childNodes = clickedListItem.parentNode.childNodes,
+                numChildNodes = childNodes.length,
+                nodeIndex = 0,
+                index;
+
+            for (var i = 0; i < numChildNodes; i++) {
+                if (childNodes[i].nodeType !== 1) {
+                    continue;
+                }
+
+                if (childNodes[i] === clickedListItem) {
+                    index = nodeIndex;
+                    break;
+                }
+                nodeIndex++;
+            }
+
+
+            if (index >= 0) {
+                // open PhotoSwipe if valid index found
+                openPhotoSwipe(index, clickedGallery);
+            }
+            return false;
+        };
+
+        // parse picture index and gallery index from URL (#&pid=1&gid=2)
+        var photoswipeParseHash = function () {
+            var hash = window.location.hash.substring(1),
+                params = {};
+
+            if (hash.length < 5) {
+                return params;
+            }
+
+            var vars = hash.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                if (!vars[i]) {
+                    continue;
+                }
+                var pair = vars[i].split('=');
+                if (pair.length < 2) {
+                    continue;
+                }
+                params[pair[0]] = pair[1];
+            }
+
+            if (params.gid) {
+                params.gid = parseInt(params.gid, 10);
+            }
+
+            return params;
+        };
+
+        var openPhotoSwipe = function (index, galleryElement, disableAnimation, fromURL) {
+            var pswpElement = document.querySelectorAll('.pswp')[0],
+                gallery,
+                options,
+                items;
+
+            items = parseThumbnailElements(galleryElement);
+
+            // define options (if needed)
+            options = {
+
+                // define gallery index (for URL)
+                galleryUID: galleryElement.getAttribute('data-pswp-uid'),
+
+                getThumbBoundsFn: function (index) {
+                    // See Options -> getThumbBoundsFn section of documentation for more info
+                    var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
+                        pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                        rect = thumbnail.getBoundingClientRect();
+
+                    return {x: rect.left, y: rect.top + pageYScroll, w: rect.width};
+                }
+
+            };
+
+            // PhotoSwipe opened from URL
+            if (fromURL) {
+                if (options.galleryPIDs) {
+                    // parse real index when custom PIDs are used
+                    // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                    for (var j = 0; j < items.length; j++) {
+                        if (items[j].pid == index) {
+                            options.index = j;
+                            break;
+                        }
+                    }
+                } else {
+                    // in URL indexes start from 1
+                    options.index = parseInt(index, 10) - 1;
+                }
+            } else {
+                options.index = parseInt(index, 10);
+            }
+
+            // exit if index not found
+            if (isNaN(options.index)) {
+                return;
+            }
+
+            if (disableAnimation) {
+                options.showAnimationDuration = 0;
+            }
+
+            // Pass data to PhotoSwipe and initialize it
+            gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+            gallery.init();
+        };
+
+        // loop through all gallery elements and bind events
+        var galleryElements = document.querySelectorAll(gallerySelector);
+
+        for (var i = 0, l = galleryElements.length; i < l; i++) {
+            galleryElements[i].setAttribute('data-pswp-uid', i + 1);
+            galleryElements[i].onclick = onThumbnailsClick;
+        }
+
+        // Parse URL and open gallery if it contains #&pid=3&gid=1
+        var hashData = photoswipeParseHash();
+        if (hashData.pid && hashData.gid) {
+            openPhotoSwipe(hashData.pid, galleryElements[hashData.gid - 1], true, true);
+        }
+    };
+
+    // execute above function
+    initPhotoSwipeFromDOM('.my-gallery');
+</script>
+<script src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.onvisible.min.js') }}"></script>
+<!-- Core JS file -->
+<script src="{{ url_for('static', filename='js/photoswipe.min.js') }}"></script>
+<!-- UI JS file -->
+<script src="{{ url_for('static', filename='js/photoswipe-ui-default.min.js') }}"></script>
+
+</html>

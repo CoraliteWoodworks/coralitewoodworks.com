@@ -397,3 +397,31 @@ class TV(db.Model):
 
     def get_cpo(self):
         return self.cpo
+
+
+class TEST(db.Model):
+    __tablename__ = 'test'
+    id = db.Column('id', db.Integer, primary_key=True)
+    description = db.Column('description', db.String(length=256))
+    gallery_id = db.Column('gallery_id', db.String(length=512))
+    cpo = db.Column('cpo', db.String(length=256))
+
+    def __init__(self, description, gallery_id, cpo):
+        self.description = description
+        self.gallery_id = gallery_id
+        self.cpo = cpo
+
+    def __repr__(self):
+        return '<Test %r>' % self.description
+
+    def get_description(self):
+        if self.description is not None:
+            return self.description
+        else:
+            return ""
+
+    def get_gallery_id(self):
+        return self.gallery_id
+
+    def get_cpo(self):
+        return self.cpo

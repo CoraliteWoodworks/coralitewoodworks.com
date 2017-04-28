@@ -1,4 +1,5 @@
-from flask import render_template
+from PIL import Image
+from flask import render_template, url_for
 
 from Coralite import *
 
@@ -123,6 +124,39 @@ def stock(n):
 @app.route('/tv/<n>', methods=['GET'])
 def tv(n):
     return show(n, TV, 'tv', 'TV Entertainment Centers')
+
+
+@app.route('/test', methods=['GET'], defaults={'n': 0})
+@app.route('/test/<n>', methods=['GET'])
+def test(n):
+    from os import listdir
+    from os.path import isfile, join
+    onlyfiles = [f for f in listdir("Coralite/static/images/test/1") if
+                 isfile(join("Coralite/static/images/test/1", f))]
+    print(len(onlyfiles))
+    filedims = []
+    for photo in onlyfiles:
+        im = Image.open("Coralite/static/images/test/1/" + photo)
+        filedims.append(im)
+
+    row = TEST.query.count()
+    if int(n) is 0:
+        description = []
+        for num in range(1, row + 1):
+            data = TEST.query.filter_by(id=num).first()
+            description.append(TEST.get_description(data))
+        return render_template('Gallery Directory.html', portfolio="test", portfolioFull="Testing",
+                               row=row, description=description)
+    elif int(n) >= 1:
+        data = TEST.query.filter_by(id=n).first()
+        description = TEST.get_description(data)
+        gallery_id = TEST.get_gallery_id(data)
+        cpo = TEST.get_cpo(data)
+        return render_template('Gallery Test.html', portfolio="test", portfolioFull="Testing",
+                               description=description,
+                               id=int(n),
+                               gallery_id=gallery_id, cpo=cpo, row=row, files=onlyfiles, size=len(onlyfiles),
+                               filedims=filedims)
 
 
 if __name__ == "__main__":
