@@ -5,7 +5,6 @@ from Coralite import *
 
 
 @app.route('/')
-@app.route('/index')
 def main():
     return render_template('index.html')
 
