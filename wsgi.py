@@ -51,79 +51,79 @@ def testimonials():
 @app.route('/additions', methods=['GET'], defaults={'n': 0})
 @app.route('/additions/<n>', methods=['GET'])
 def additions(n):
-    return show(n, Additions, 'additions', 'Additions & Renovations')
+    return show(int(n), Additions, 'additions', 'Additions & Renovations')
 
 
 @app.route('/bars', methods=['GET'], defaults={'n': 0})
 @app.route('/bars/<n>', methods=['GET'])
 def bars(n):
-    return show(n, Bars, 'bars', 'Bars & Wine Storage')
+    return show(int(n), Bars, 'bars', 'Bars & Wine Storage')
 
 
 @app.route('/basements', methods=['GET'], defaults={'n': 0})
 @app.route('/basements/<n>', methods=['GET'])
 def basements(n):
-    return show(n, Basements, 'basements', 'Basements')
+    return show(int(n), Basements, 'basements', 'Basements')
 
 
 @app.route('/bathrooms', methods=['GET'], defaults={'n': 0})
 @app.route('/bathrooms/<n>', methods=['GET'])
 def bathrooms(n):
-    return show(n, Bathrooms, 'bathrooms', 'Bathrooms & Vanities')
+    return show(int(n), Bathrooms, 'bathrooms', 'Bathrooms & Vanities')
 
 
 @app.route('/builtins', methods=['GET'], defaults={'n': 0})
 @app.route('/builtins/<n>', methods=['GET'])
 def builtins(n):
-    return show(n, Builtins, 'builtins', 'Built-ins & Bookcases')
+    return show(int(n), Builtins, 'builtins', 'Built-ins & Bookcases')
 
 
 @app.route('/decks', methods=['GET'], defaults={'n': 0})
 @app.route('/decks/<n>', methods=['GET'])
 def decks(n):
-    return show(n, Decks, 'decks', 'Decks & Porches')
+    return show(int(n), Decks, 'decks', 'Decks & Porches')
 
 
 @app.route('/kitchens', methods=['GET'], defaults={'n': 0})
 @app.route('/kitchens/<n>', methods=['GET'])
 def kitchens(n):
-    return show(n, Kitchens, 'kitchens', 'Kitchens')
+    return show(int(n), Kitchens, 'kitchens', 'Kitchens')
 
 
 @app.route('/mantels', methods=['GET'], defaults={'n': 0})
 @app.route('/mantels/<n>', methods=['GET'])
 def mantels(n):
-    return show(n, Mantels, 'mantels', 'Mantels')
+    return show(int(n), Mantels, 'mantels', 'Mantels')
 
 
 @app.route('/mudrooms', methods=['GET'], defaults={'n': 0})
 @app.route('/mudrooms/<n>', methods=['GET'])
 def mudrooms(n):
-    return show(n, Mudrooms, 'mudrooms', 'Mudrooms & Closets')
+    return show(int(n), Mudrooms, 'mudrooms', 'Mudrooms & Closets')
 
 
 @app.route('/offices', methods=['GET'], defaults={'n': 0})
 @app.route('/offices/<n>', methods=['GET'])
 def offices(n):
-    return show(n, Offices, 'offices', 'Desks & Offices')
+    return show(int(n), Offices, 'offices', 'Desks & Offices')
 
 
 @app.route('/paneling', methods=['GET'], defaults={'n': 0})
 @app.route('/paneling/<n>', methods=['GET'])
 def paneling(n):
-    return show(n, Paneling, 'paneling', 'Paneling & Wainscoting')
+    return show(int(n), Paneling, 'paneling', 'Paneling & Wainscoting')
 
 
 @app.route('/stock', methods=['GET'], defaults={'n': 0})
 @app.route('/stock/<n>', methods=['GET'])
 def stock(n):
-    return show(n, Stock, 'stock', 'Stock Cabinets')
+    return show(int(n), Stock, 'stock', 'Stock Cabinets')
 
 
 @app.route('/tv', methods=['GET'], defaults={'n': 0})
 @app.route('/tv/<n>', methods=['GET'])
 def tv(n):
-    return show(n, TV, 'tv', 'TV Entertainment Centers')
+    return show(int(n), TV, 'tv', 'TV Entertainment Centers')
 
 
 @app.route('/test', methods=['GET'], defaults={'n': 0})
