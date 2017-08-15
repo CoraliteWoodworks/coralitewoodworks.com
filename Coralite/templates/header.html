@@ -6,8 +6,8 @@
       content="Carpentry, Design build, Remodeling, Cabinets, Custom Cabinets, Cabinetry, Kitchen Cabinets, Custom Kitchen Cabinets, Additions, remodels, Home Improvement, Wood cabinets, Entertainment centers, trim work, tile work, bathroom renovation, bathroom remodel, kitchen remodel, kitchen renovation, Restoration, second story addition, garage addition, pool house, TV Cabinet, Entertainment unit, Woodworker, Cabinetmaker, Home remodel, Carpenter, Medicine Cabinets, Vanity Mirrors, Custom Vanities, Bathroom Vanity, Built-in Cabinets, Mantels, Custom Furniture, Wine storage Cabinets, Window seat, Radiator cover, Bookcases, Storage cabinets, Linen Cabinet, Woodworking, Armoires, Beds, Millwork, Wainscoting, Crown Mould, Coralite Woodworks, Fairfield County, Connecticut, Coralite, Woodworks"
 />
 <link rel="stylesheet" href="{{ url_for('static', filename='css/skel.css') }}"/>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style-wide.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}"/>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style-wide.min.css') }}"/>
 <link rel="apple-touch-icon" sizes="57x57"
       href="{{ url_for('static', filename='images/Favicon/apple-icon-57x57.png') }}">
 <link rel="apple-touch-icon" sizes="60x60"
@@ -36,10 +36,9 @@
       href="{{ url_for('static', filename='images/Favicon/favicon-16x16.png') }}">
 <link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}">
 <meta name="theme-color" content="#5b0000">
-<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileColor" content="#5b0000">
 <meta name="msapplication-TileImage"
       content="{{ url_for('static', filename='images/Favicon/ms-icon-144x144.png') }}">
-<meta name="theme-color" content="#ffffff">
 <!--[if lte IE 8]><script src="{{ url_for('static', filename='css/ie/html5shiv.js') }}"></script><![endif]-->
 <!--[if lte IE 9]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v9.css') }}" /><![endif]-->
 <!--[if lte IE 8]><link rel="stylesheet" href="{{ url_for('static', filename='css/ie/v8.css') }}" /><![endif]-->
@@ -50,7 +49,8 @@
         i['GoogleAnalyticsObject'] = r;
         i[r] = i[r] || function () {
             (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
+        },
+            i[r].l = 1 * new Date();
         a = s.createElement(o),
             m = s.getElementsByTagName(o)[0];
         a.async = 1;
