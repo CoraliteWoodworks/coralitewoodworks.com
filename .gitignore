@@ -2,3 +2,5 @@
 .idea
 config.py
 __pycache__/
+Coralite/static/components/*
+Coralite/static/components
