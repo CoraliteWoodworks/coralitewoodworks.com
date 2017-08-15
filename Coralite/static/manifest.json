@@ -4,7 +4,7 @@
   "theme_color": "#5b0000",
   "background_color": "#FFF",
   "start_url": "/",
-  "display": "browser",
+  "display": "minimal-ui",
   "lang": "en-US",
   "orientation": "portrait",
   "icons": [
