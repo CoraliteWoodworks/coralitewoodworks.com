@@ -18,6 +18,7 @@
   "dependencies": {
     "jquery": "^1.9.1",
     "bootstrap": "^3.3.7",
-    "photoswipe": "^4.1.2"
+    "photoswipe": "^4.1.2",
+    "jquery-lazy": "^1.7.5"
   }
 }
