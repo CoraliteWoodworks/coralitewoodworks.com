@@ -4,13 +4,10 @@
 <script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/skel-layers.min.js') }}"></script>
 <script src="{{ url_for('static', filename='components/jquery-lazy/jquery-lazy.min.js') }}"></script>
-<script type="application/javascript">
-    $(function ($) {
-        $("img.lazy").Lazy();
-    });
-</script>
 <script>
     (function ($) {
+
+        $("img.lazy").Lazy();
 
         skel.init({
             reset: 'full',
