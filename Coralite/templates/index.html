@@ -14,8 +14,13 @@
 
         <!-- Logo -->
         <div id="logo">
-            <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
-                                                 width="100%" height="" alt="Coralite Logo"></a>
+            <a href="{{ url_for('main') }}"><img class="lazy"
+                                                 data-src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
+                                                 width="100%" height="" alt="Coralite Logo" src=""></a>
+            <noscript>
+                <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
+                                                     width="100%" height="" alt="Coralite Logo"></a>
+            </noscript>
         </div>
 
         <!-- Nav -->
@@ -67,7 +72,12 @@
         <div class="container">
 
             <header>
-                <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%" height="55%" alt="Coralite Logo"/>
+                <img class="lazy" data-src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%"
+                     height="55%" alt="Coralite Logo" src=""/>
+                <noscript>
+                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%"
+                         height="55%" alt="Coralite Logo"/>
+                </noscript>
                 <p></p>
             </header>
 
@@ -106,35 +116,45 @@
                 <h2>Design Portfolio</h2>
             </header>
             <div class="row">
+                <noscript>
+                    {% include 'portfolio/noscript.html' %}
+                </noscript>
                 <div class="4u">
                     <article class="item">
-                        <a href="{{ url_for('additions') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Additions.jpg') }}"
-                                alt="Additions &amp; Renovations"/></a>
+                        <a href="{{ url_for('additions') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Additions.jpg') }}"
+                                 alt="Additions &amp; Renovations"
+                                 src=""/></a>
                         <header>
                             <h3>Additions &amp; Renovations</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('builtins') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Built In.jpg') }}"
-                                alt="Built-ins &amp; Bookcases"/></a>
+                        <a href="{{ url_for('builtins') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Built In.jpg') }}"
+                                 alt="Built-ins &amp; Bookcases"
+                                 src=""/></a>
                         <header>
                             <h3>Built-ins &amp; Bookcases</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('kitchens') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Kitchens.jpg') }}"
-                                alt="Kitchens"/></a>
+                        <a href="{{ url_for('kitchens') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Kitchens.jpg') }}"
+                                 alt="Kitchens" src=""/></a>
                         <header>
                             <h3>Kitchens</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('paneling') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Paneling.jpg') }}"
-                                alt="Paneling &amp; Wainscoting"/></a>
+                        <a href="{{ url_for('paneling') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Paneling.jpg') }}"
+                                 alt="Paneling &amp; Wainscoting"
+                                 src=""/></a>
                         <header>
                             <h3>Paneling &amp; Wainscoting</h3>
                         </header>
@@ -142,41 +162,46 @@
                 </div>
                 <div class="4u">
                     <article class="item">
-                        <a href="{{ url_for('basements') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Basements.jpg') }}"
-                                alt="Basements"/></a>
+                        <a href="{{ url_for('basements') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Basements.jpg') }}"
+                                 alt="Basements" src=""/></a>
                         <header>
                             <h3>Basements</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('decks') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Decks.jpg') }}"
-                                alt="Decks &amp; Porches"/></a>
+                        <a href="{{ url_for('decks') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Decks.jpg') }}"
+                                 alt="Decks &amp; Porches" src=""/></a>
                         <header>
                             <h3>Decks &amp; Porches</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('mantels') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Mantels.jpg') }}"
-                                alt="Mantels"/></a>
+                        <a href="{{ url_for('mantels') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Mantels.jpg') }}"
+                                 alt="Mantels" src=""/></a>
                         <header>
                             <h3>Mantels</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('tv') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/TV Entertainment.jpg') }}"
-                                alt="TV Entertainment Centers"/></a>
+                        <a href="{{ url_for('tv') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/TV Entertainment.jpg') }}"
+                                 alt="TV Entertainment Centers" src=""/></a>
                         <header>
                             <h3>TV Entertainment Centers</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('stock') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Stock Cabinets.jpg') }}"
-                                alt="Stock Cabinets"/></a>
+                        <a href="{{ url_for('stock') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Stock Cabinets.jpg') }}"
+                                 alt="Stock Cabinets" src=""/></a>
                         <header>
                             <h3>Stock Cabinets</h3>
                         </header>
@@ -184,33 +209,39 @@
                 </div>
                 <div class="4u">
                     <article class="item">
-                        <a href="{{ url_for('bathrooms') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Bathrooms.jpg') }}"
-                                alt="Bathrooms &amp; Vanities"/></a>
+                        <a href="{{ url_for('bathrooms') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Bathrooms.jpg') }}"
+                                 alt="Bathrooms &amp; Vanities"
+                                 src=""/></a>
                         <header>
                             <h3>Bathrooms &amp; Vanities</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('offices') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Offices.jpg') }}"
-                                alt="Desks &amp; Offices"/></a>
+                        <a href="{{ url_for('offices') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Offices.jpg') }}"
+                                 alt="Desks &amp; Offices" src=""/></a>
                         <header>
                             <h3>Desks &amp; Offices</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('mudrooms') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Mudrooms.jpg') }}"
-                                alt="Mudrooms & Closets"/></a>
+                        <a href="{{ url_for('mudrooms') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Mudrooms.jpg') }}"
+                                 alt="Mudrooms & Closets" src=""/></a>
                         <header>
                             <h3>Mudrooms & Closets</h3>
                         </header>
                     </article>
                     <article class="item">
-                        <a href="{{ url_for('bars') }}" class="image fit"><img class="lazy"
-                                data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Bars.jpg') }}"
-                                alt="Bars &amp; Wine Storage"/></a>
+                        <a href="{{ url_for('bars') }}" class="image fit">
+                            <img class="lazy"
+                                 data-src="{{ url_for('static', filename='images/Design Portfolio Photos/Bars.jpg') }}"
+                                 alt="Bars &amp; Wine Storage"
+                                 src=""/></a>
                         <header>
                             <h3>Bars &amp; Wine Storage</h3>
                         </header>
