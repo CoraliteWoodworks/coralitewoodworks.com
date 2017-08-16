@@ -3,7 +3,7 @@
 
 <head>
     <title>Coralite Woodworks</title>
-    {% include 'header.html' %}
+    {% include 'wrapper/header.html' %}
 </head>
 
 <body>
@@ -13,14 +13,16 @@
     <div class="top">
 
         <!-- Logo -->
-        <div id="logo">
+        <noscript>
+            <div id="logo">
+                <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
+                                                     width="100%" height="" alt="Coralite Logo"></a>
+            </div>
+        </noscript>
+        <div id="logo jsonly">
             <a href="{{ url_for('main') }}"><img class="lazy"
                                                  data-src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
                                                  width="100%" height="" alt="Coralite Logo" src=""></a>
-            <noscript>
-                <a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}"
-                                                     width="100%" height="" alt="Coralite Logo"></a>
-            </noscript>
         </div>
 
         <!-- Nav -->
@@ -40,26 +42,7 @@
     </div>
 
     <div class="bottom">
-
-        <!-- Social Icons -->
-        <ul class="icons">
-            <li>
-                <a href="https://www.facebook.com/Coralitewoodworks/"
-                   class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
-            <li><a href="http://www.linkedin.com/pub/brian-matte/72/89/1a6" class="icon fa-linkedin"
-                   target="_blank"><span
-                    class="label">Linkedin</span></a></li>
-            <li><a href="http://www.houzz.com/pro/coralite/coralite-woodworks-llc" class="icon fa-houzz"
-                   target="_blank"><span
-                    class="label">Houzz</span></a></li>
-            <li><a href="https://www.instagram.com/coralitewoodworks/" class="icon fa-instagram"
-                   target="_blank"><span
-                    class="label">Instagram</span></a></li>
-            <li><a href="https://plus.google.com/u/0/+CoraliteWoodworksLLCNewtown" class="icon fa-google"
-                   target="_blank"><span
-                    class="label">Google</span></a></li>
-        </ul>
-
+        {% include 'wrapper/social.html' %}
     </div>
 
 </div>
@@ -71,13 +54,17 @@
     <section id="top" class="one dark cover">
         <div class="container">
 
-            <header>
-                <img class="lazy" data-src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%"
-                     height="55%" alt="Coralite Logo" src=""/>
-                <noscript>
+            <noscript>
+                <header>
                     <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%"
                          height="55%" alt="Coralite Logo"/>
-                </noscript>
+                    <p></p>
+                </header>
+            </noscript>
+
+            <header class="jsonly">
+                <img class="lazy" data-src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%"
+                     height="55%" alt="Coralite Logo" src=""/>
                 <p></p>
             </header>
 
@@ -115,10 +102,10 @@
             <header>
                 <h2>Design Portfolio</h2>
             </header>
-            <div class="row">
-                <noscript>
-                    {% include 'portfolio/noscript.html' %}
-                </noscript>
+            <noscript>
+                {% include 'portfolio/noscript.html' %}
+            </noscript>
+            <div class="row jsonly">
                 <div class="4u">
                     <article class="item">
                         <a href="{{ url_for('additions') }}" class="image fit">
@@ -390,5 +377,5 @@
 </div>
 
 </body>
-{% include 'footer.html' %}
+{% include 'wrapper/footer.html' %}
 </html>

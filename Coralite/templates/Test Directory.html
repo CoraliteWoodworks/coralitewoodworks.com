@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Coralite Woodworks | {{ portfolioFull }}</title>
-       {% include 'header.html' %}
+       {% include 'wrapper/header.html' %}
 </head>
 <body>
 
@@ -45,21 +45,7 @@
     </div>
 
     <div class="bottom">
-
-        <!-- Social Icons -->
-        <ul class="icons">
-            <li>
-                <a href="https://www.facebook.com/pages/Coralite-Woodworks-Residential-Remodeling-and-Custom-Cabinetry/109644202410016"
-                   class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-            <li><a href="http://www.linkedin.com/pub/brian-matte/72/89/1a6" class="icon fa-linkedin"><span
-                    class="label">Linkedin</span></a></li>
-            <li><a href="http://www.houzz.com/pro/coralite/coralite-woodworks-llc" class="icon fa-houzz"><span
-                    class="label">Houzz</span></a></li>
-            <li><a href="mailto:coralitewoodworks@gmail.com" class="icon fa-envelope"><span
-                    class="label">Email</span></a></li>
-            <li><a href="tel://1-203-364-9600" class="icon fa-phone"><span class="label">Phone</span></a></li>
-        </ul>
-
+        {% include 'wrapper/social.html' %}
     </div>
 
 </div>
