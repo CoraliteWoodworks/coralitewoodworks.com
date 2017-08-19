@@ -35,12 +35,21 @@
 
             -->
             <ul>
-                <li><a href="{{ url_for('main') }}#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span
-                        class="icon fa-th">Design Portfolio</span></a></li>
-                <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-picture-o">Gallery</span></a>
+                <li>
+                    <a href="{{ url_for('main') }}#portfolio" id="portfolio-link">
+                        <span class="icon fa-th">Design Portfolio</span>
+                    </a>
                 </li>
-                <li><a href="{{ url_for(portfolio.lower()) }}" id="about-link" class="skel-layers-ignoreHref"><span
-                        class="icon fa-sitemap ">{{ portfolioFull }}</span></a></li>
+                <li>
+                    <a href="#about" id="about-link">
+                        <span class="icon fa-picture-o">Gallery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for(portfolio.lower()) }}" id="about-link">
+                        <span class="icon fa-sitemap ">{{ portfolioFull }}</span>
+                    </a>
+                </li>
             </ul>
         </nav>
 

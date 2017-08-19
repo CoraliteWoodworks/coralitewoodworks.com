@@ -7,37 +7,7 @@ module.exports = function (grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             build: {
-                files: [
-                    {
-                        expand: true,
-                        src: 'public/js/app/*.js',
-                        ext: '.min.js'
-                    },
-                    {
-                        expand: true,
-                        src: 'public/js/zorus.js',
-                        ext: '.min.js'
-                    },
-                    {
-                        expand: true,
-                        src: 'public/components/bootbox.js/bootbox.js',
-                        ext: '.min.js'
-                    }
-                ]
-            }
-        },
-        watch: {
-            cssmin: {
-                files: ['public/css/*.css', '!public/css/*.min.css'],
-                tasks: ['cssmin']
-            },
-            concat: {
-                files: '<%= concat.dist.src >',
-                tasks: ['concat']
-            },
-            uglify: {
-                files: ['public/js/app/*.js', 'public/js/zorus.js', 'public/components/bootbox.js/bootbox.js'],
-                tasks: ['uglify']
+                files: []
             }
         },
         cssmin: {
@@ -85,6 +55,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
 
     // Default task.
-    grunt.registerTask('default', ['cssmin', /*'jshint',*/ 'concat', 'uglify', 'watch']);
+    grunt.registerTask('default', ['cssmin', 'uglify']);
 
 };
