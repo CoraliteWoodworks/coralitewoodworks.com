@@ -1947,7 +1947,8 @@
 		}
 
 			.item header h3 {
-				font-size: 1em;
+				font-size: 0.8em;
+				padding: 1em 1em 1em 1em;
 			}
 
 /* Icons */
