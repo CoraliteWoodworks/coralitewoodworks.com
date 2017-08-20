@@ -247,10 +247,8 @@
 </div>
 
 <script>
-if('serviceWorker' in navigator) {
-  navigator.serviceWorker
-           .register("{{ url_for('static', filename='sw.js') }}")
-           .then(function() { console.log("Service Worker Registered"); });
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register("{{ url_for('static', filename='service-worker.js') }}");
 }
 </script>
 
