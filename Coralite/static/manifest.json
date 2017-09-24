@@ -5,7 +5,7 @@
   "background_color": "#FFF",
   "start_url": "/",
   "display": "minimal-ui",
-  "lang": "en-US",
+  "lang": "en-us",
   "orientation": "portrait",
   "icons": [
     {
