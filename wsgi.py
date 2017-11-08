@@ -1,5 +1,4 @@
-from PIL import Image
-from flask import render_template, url_for
+from flask import render_template
 
 from Coralite import *
 
@@ -27,6 +26,11 @@ def show(n, Class, portfolio, portfolio_full):
                                description=description,
                                id=int(n),
                                gallery_id=gallery_id, cpo=cpo, row=row)
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 
 @app.route('/testimonials')
