@@ -7,6 +7,16 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://coralite:' + password +
 db = SQLAlchemy(app)
 
 
+class Descriptions(db.Model):
+    __tablename__ = 'descriptions'
+    id = db.Column('id', db.Integer, primary_key=True)
+    portfolio = db.Column('portfolio', db.String(length=128))
+    description = db.Column('description', db.String(length=256))
+
+    def __repr__(self):
+        return self.description
+
+
 class Testimonials(db.Model):
     __tablename__ = 'testimonials'
     id = db.Column('id', db.Integer, primary_key=True)

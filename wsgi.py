@@ -5,36 +5,41 @@ from Coralite import *
 
 @app.route('/')
 def main():
-    return render_template('index.html')
+    page_description = Descriptions.query.filter_by(portfolio="default").first()
+    return render_template('index.html', page_description=page_description)
 
 
 def show(n, Class, portfolio, portfolio_full):
+    page_description = Descriptions.query.filter_by(portfolio=portfolio).first()
+    if page_description is None:
+        page_description = Descriptions.query.filter_by(portfolio="default").first()
     row = Class.query.count()
     if int(n) is 0:
         description = []
         for num in range(1, row + 1):
             data = Class.query.filter_by(id=num).first()
             description.append(Class.get_description(data))
-        return render_template('Gallery Directory.html', portfolio=portfolio, portfolioFull=portfolio_full,
-                               row=row, description=description)
+        return render_template('Gallery Directory.html', portfolio=portfolio, portfolioFull=portfolio_full, row=row,
+                               description=description, page_description=page_description, )
     elif int(n) >= 1:
         data = Class.query.filter_by(id=n).first()
         description = Class.get_description(data)
         gallery_id = Class.get_gallery_id(data)
         cpo = Class.get_cpo(data)
         return render_template('Gallery Basic.html', portfolio=portfolio, portfolioFull=portfolio_full,
-                               description=description,
-                               id=int(n),
+                               description=description, id=int(n), page_description=page_description,
                                gallery_id=gallery_id, cpo=cpo, row=row)
 
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    page_description = Descriptions.query.filter_by(portfolio="default").first()
+    return render_template('404.html', page_description=page_description), 404
 
 
 @app.route('/testimonials')
 def testimonials():
+    page_description = Descriptions.query.filter_by(portfolio="default").first()
     row = Testimonials.query.count()
     content = []
     for num in range(1, row + 1):
@@ -48,7 +53,7 @@ def testimonials():
     for num in range(1, row + 1):
         data = Testimonials.query.filter_by(id=num).first()
         link.append(Testimonials.get_link(data))
-    return render_template('testimonials.html', content=content, source=source, link=link, row=row)
+    return render_template('testimonials.html', content=content, source=source, link=link, row=row, page_description=page_description)
 
 
 @app.route('/additions', methods=['GET'], defaults={'n': 0})
