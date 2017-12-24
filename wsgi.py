@@ -16,18 +16,21 @@ def show(n, Class, portfolio, portfolio_full):
     row = Class.query.count()
     if int(n) is 0:
         description = []
+        location = []
         for num in range(1, row + 1):
             data = Class.query.filter_by(id=num).first()
             description.append(Class.get_description(data))
+            location.append(Class.get_location(data))
         return render_template('Gallery Directory.html', portfolio=portfolio, portfolioFull=portfolio_full, row=row,
-                               description=description, page_description=page_description, )
+                               description=description, location=location, page_description=page_description, )
     elif int(n) >= 1:
         data = Class.query.filter_by(id=n).first()
         description = Class.get_description(data)
+        location = Class.get_location(data)
         gallery_id = Class.get_gallery_id(data)
         cpo = Class.get_cpo(data)
         return render_template('Gallery Basic.html', portfolio=portfolio, portfolioFull=portfolio_full,
-                               description=description, id=int(n), page_description=page_description,
+                               description=description, location=location, id=int(n), page_description=page_description,
                                gallery_id=gallery_id, cpo=cpo, row=row)
 
 
@@ -53,7 +56,8 @@ def testimonials():
     for num in range(1, row + 1):
         data = Testimonials.query.filter_by(id=num).first()
         link.append(Testimonials.get_link(data))
-    return render_template('testimonials.html', content=content, source=source, link=link, row=row, page_description=page_description)
+    return render_template('testimonials.html', content=content, source=source, link=link, row=row,
+                           page_description=page_description)
 
 
 @app.route('/additions', methods=['GET'], defaults={'n': 0})

@@ -3,11 +3,18 @@
         {% for number in range(1, row + 1) %}
             {% if number % 3 == 1 %}
                 <article class="item">
-                    <a href="{{ url_for(portfolio.lower()) }}/{{ number|string }}" class="image fit" title="{{ description[number - 1] }}"><img
-                            src="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}"
-                            alt="{{ description[number - 1] }}"/></a>
+                    <a href="{{ url_for(portfolio.lower()) }}/{{ number|string }}" class="image fit"
+                       title="{{ description[number - 1] }}">
+                        <img src="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}"
+                             alt="{{ description[number - 1] }}"/>
+                    </a>
                     <header>
-                        <h4 id="description">{{ description[number - 1] }}</h4>
+                        {% if description[number - 1] != "" %}
+                            <h4 id="description">{{ description[number - 1] }}</h4>
+                        {% endif %}
+                        {% if location[number - 1] != "" %}
+                            <h5 id="location"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
+                        {% endif %}
                     </header>
                 </article>
             {% endif %}
@@ -17,11 +24,18 @@
         {% for number in range(1, row + 1) %}
             {% if number % 3 == 2 %}
                 <article class="item">
-                    <a href="{{ url_for(portfolio.lower()) }}/{{ number }}" class="image fit" title="{{ description[number - 1] }}"><img
-                            src="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}"
-                            alt="{{ description[number - 1] }}"/></a>
+                    <a href="{{ url_for(portfolio.lower()) }}/{{ number }}" class="image fit"
+                       title="{{ description[number - 1] }}">
+                        <img src="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}"
+                             alt="{{ description[number - 1] }}"/>
+                    </a>
                     <header>
-                        <h4 id="description">{{ description[number - 1] }}</h4>
+                        {% if description[number - 1] != "" %}
+                            <h4 id="description">{{ description[number - 1] }}</h4>
+                        {% endif %}
+                        {% if location[number - 1] != "" %}
+                            <h5 id="location"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
+                        {% endif %}
                     </header>
                 </article>
 
@@ -33,11 +47,18 @@
         {% for number in range(1, row + 1) %}
             {% if number % 3 == 0 %}
                 <article class="item">
-                    <a href="{{ url_for(portfolio.lower()) }}/{{ number }}" class="image fit" title="{{ description[number - 1] }}"><img
-                            src="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}"
-                            alt="{{ description[number - 1] }}"/></a>
+                    <a href="{{ url_for(portfolio.lower()) }}/{{ number }}" class="image fit"
+                       title="{{ description[number - 1] }}">
+                        <img src="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}"
+                             alt="{{ description[number - 1] }}"/>
+                    </a>
                     <header>
-                        <h4 id="description">{{ description[number - 1] }}</h4>
+                        {% if description[number - 1] != "" %}
+                            <h4 id="description">{{ description[number - 1] }}</h4>
+                        {% endif %}
+                        {% if location[number - 1] != "" %}
+                            <h5 id="location"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
+                        {% endif %}
                     </header>
                 </article>
             {% endif %}

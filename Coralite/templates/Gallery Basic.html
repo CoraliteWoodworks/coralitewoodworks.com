@@ -58,8 +58,6 @@
     <!-- About Me -->
     <section id="about" class="three">
         <div class="container">
-
-            <p>
             <div id="{{ gallery_id }}">...</div>
             <script type="text/javascript">
                 var cpo = [];
@@ -75,10 +73,16 @@
                     var c = document.getElementsByTagName("script")[0];
                     c.parentNode.insertBefore(cp, c);
                 })(); </script>
-            </p>
-            <p>
-                {{ description }}
-            </p>
+            {% if description != "" %}
+                <p>
+                    {{ description }}
+                </p>
+            {% endif %}
+            {% if location != "" %}
+                <p>
+                    <span class="fa fa-map-marker"></span> {{ location }}
+                </p>
+            {% endif %}
         </div>
     </section>
 
