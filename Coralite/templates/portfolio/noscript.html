@@ -1,33 +1,61 @@
 <div class="row">
     <div class="4u 12u$(mobile)">
         <article class="item">
-            <a href="{{ url_for('additions') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Additions.jpg') }}"
-                    alt="Additions &amp; Renovations"/></a>
+            <a href="{{ url_for('additions') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Additions.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Additions.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Additions.jpg') }}"
+                         alt="Additions &amp; Renovations"/>
+                </picture>
+            </a>
             <header>
                 <h3>Additions &amp; Renovations</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('builtins') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Built In.jpg') }}"
-                    alt="Built-ins &amp; Bookcases"/></a>
+            <a href="{{ url_for('builtins') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Built In.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Built In.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Built In.jpg') }}"
+                         alt="Built-ins &amp; Bookcases"/>
+                </picture>
+            </a>
             <header>
                 <h3>Built-ins &amp; Bookcases</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('kitchens') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Kitchens.jpg') }}"
-                    alt="Kitchens"/></a>
+            <a href="{{ url_for('kitchens') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Kitchens.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Kitchens.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Kitchens.jpg') }}"
+                         alt="Kitchens"/>
+                </picture>
+            </a>
             <header>
                 <h3>Kitchens</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('paneling') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Paneling.jpg') }}"
-                    alt="Paneling &amp; Wainscoting"/></a>
+            <a href="{{ url_for('paneling') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Paneling.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Paneling.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Paneling.jpg') }}"
+                         alt="Paneling &amp; Wainscoting"/>
+                </picture>
+            </a>
             <header>
                 <h3>Paneling &amp; Wainscoting</h3>
             </header>
@@ -35,41 +63,76 @@
     </div>
     <div class="4u 12u$(mobile)">
         <article class="item">
-            <a href="{{ url_for('basements') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Basements.jpg') }}"
-                    alt="Basements"/></a>
+            <a href="{{ url_for('basements') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Basements.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Basements.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Basements.jpg') }}"
+                         alt="Basements"/>
+                </picture>
+            </a>
             <header>
                 <h3>Basements</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('decks') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Decks.jpg') }}"
-                    alt="Decks &amp; Porches"/></a>
+            <a href="{{ url_for('decks') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Decks.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Decks.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Decks.jpg') }}"
+                         alt="Decks &amp; Porches"/>
+                </picture>
+            </a>
             <header>
                 <h3>Decks &amp; Porches</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('mantels') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Mantels.jpg') }}"
-                    alt="Mantels"/></a>
+            <a href="{{ url_for('mantels') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Mantels.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Mantels.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Mantels.jpg') }}"
+                         alt="Mantels"/>
+                </picture>
+            </a>
             <header>
                 <h3>Mantels</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('tv') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/TV Entertainment.jpg') }}"
-                    alt="TV Entertainment Centers"/></a>
+            <a href="{{ url_for('tv') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/TV Entertainment.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/TV Entertainment.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/TV Entertainment.jpg') }}"
+                         alt="TV Entertainment Centers"/>
+                </picture>
+            </a>
             <header>
                 <h3>TV Entertainment Centers</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('stock') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Stock Cabinets.jpg') }}"
-                    alt="Stock Cabinets"/></a>
+            <a href="{{ url_for('stock') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Stock Cabinets.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Stock Cabinets.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Stock Cabinets.jpg') }}"
+                         alt="Stock Cabinets"/>
+                </picture>
+            </a>
             <header>
                 <h3>Stock Cabinets</h3>
             </header>
@@ -77,33 +140,61 @@
     </div>
     <div class="4u 12u$(mobile)">
         <article class="item">
-            <a href="{{ url_for('bathrooms') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Bathrooms.jpg') }}"
-                    alt="Bathrooms &amp; Vanities"/></a>
+            <a href="{{ url_for('bathrooms') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Bathrooms.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Bathrooms.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Bathrooms.jpg') }}"
+                         alt="Bathrooms &amp; Vanities"/>
+                </picture>
+            </a>
             <header>
                 <h3>Bathrooms &amp; Vanities</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('offices') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Offices.jpg') }}"
-                    alt="Desks &amp; Offices"/></a>
+            <a href="{{ url_for('offices') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Offices.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Offices.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Offices.jpg') }}"
+                         alt="Desks &amp; Offices"/>
+                </picture>
+            </a>
             <header>
                 <h3>Desks &amp; Offices</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('mudrooms') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Mudrooms.jpg') }}"
-                    alt="Mudrooms & Closets"/></a>
+            <a href="{{ url_for('mudrooms') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Mudrooms.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Mudrooms.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Mudrooms.jpg') }}"
+                         alt="Mudrooms & Closets"/>
+                </picture>
+            </a>
             <header>
                 <h3>Mudrooms & Closets</h3>
             </header>
         </article>
         <article class="item">
-            <a href="{{ url_for('bars') }}" class="image fit"><img
-                    src="{{ url_for('static', filename='images/Design Portfolio Photos/Bars.jpg') }}"
-                    alt="Bars &amp; Wine Storage"/></a>
+            <a href="{{ url_for('bars') }}" class="image fit">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/WebP/Bars.webp') }}"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Bars.jpg') }}"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Design Portfolio Photos/jpg/Bars.jpg') }}"
+                         alt="Bars &amp; Wine Storage"/>
+                </picture>
+            </a>
             <header>
                 <h3>Bars &amp; Wine Storage</h3>
             </header>

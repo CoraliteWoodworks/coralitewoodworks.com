@@ -15,8 +15,12 @@
         <!-- Logo -->
         <div id="logo">
             <a href="{{ url_for('main') }}">
-                <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
-                     alt="Coralite Woodworks, LLC.">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
+                         alt="Coralite Woodworks, LLC.">
+                </picture>
             </a>
         </div>
 

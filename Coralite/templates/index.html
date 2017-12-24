@@ -15,8 +15,12 @@
         <!-- Logo -->
         <div id="logo">
             <a href="{{ url_for('main') }}">
-                <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
-                     alt="Coralite Woodworks, LLC.">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
+                         alt="Coralite Woodworks, LLC.">
+                </picture>
             </a>
         </div>
 
@@ -61,8 +65,14 @@
         <div class="container">
 
             <header>
-                <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%"
-                     height="55%" alt="Coralite Logo"/>
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" width="55%" height="55%"
+                            type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%" height="55%"
+                            type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="55%"
+                         height="55%" alt="Coralite Logo"/>
+                </picture>
                 <h1 hidden>Coralite Woodworks LLC.</h1>
             </header>
 
@@ -160,7 +170,8 @@
                     creative, talented and also a very nice person. It doesn't get much better than that when you hire
                     someone to come into your home. He is my first recommendation to anyone. He is excellent."<a
                             href="https://www.houzz.com/viewReview/125250/Coralite-Woodworks-LLC--review"
-                            class="icon fa-houzz" target="_blank" rel="noopener" title="Houzz Testimonial"><span class="label">(yolster16) - Via Houzz</span></a>
+                            class="icon fa-houzz" target="_blank" rel="noopener" title="Houzz Testimonial"><span
+                            class="label">(yolster16) - Via Houzz</span></a>
                 </li>
                 <li>"Brian is one of the best cabinet makers I have ever had been privileged to know and use..... if you
                     need and demand quality, you owe it to yourself to see his work."<a
