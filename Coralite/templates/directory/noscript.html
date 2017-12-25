@@ -16,10 +16,10 @@
                     </a>
                     <header>
                         {% if description[number - 1] != "" %}
-                            <h4 id="description">{{ description[number - 1] }}</h4>
+                            <h4 id="description-{{ number }}">{{ description[number - 1] }}</h4>
                         {% endif %}
                         {% if location[number - 1] != "" %}
-                            <h5 id="location"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
+                            <h5 id="location-{{ number }}"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
                         {% endif %}
                     </header>
                 </article>
@@ -43,10 +43,10 @@
                     </a>
                     <header>
                         {% if description[number - 1] != "" %}
-                            <h4 id="description">{{ description[number - 1] }}</h4>
+                            <h4 id="description-{{ number }}">{{ description[number - 1] }}</h4>
                         {% endif %}
                         {% if location[number - 1] != "" %}
-                            <h5 id="location"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
+                            <h5 id="location-{{ number }}"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
                         {% endif %}
                     </header>
                 </article>
@@ -72,10 +72,10 @@
                     </a>
                     <header>
                         {% if description[number - 1] != "" %}
-                            <h4 id="description">{{ description[number - 1] }}</h4>
+                            <h4 id="description-{{ number }}">{{ description[number - 1] }}</h4>
                         {% endif %}
                         {% if location[number - 1] != "" %}
-                            <h5 id="location"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
+                            <h5 id="location-{{ number }}"><span class="fa fa-map-marker"></span> {{ location[number - 1] }}</h5>
                         {% endif %}
                     </header>
                 </article>
