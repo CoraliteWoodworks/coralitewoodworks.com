@@ -1,5 +1,6 @@
 pillow
 Flask
 flask_sqlalchemy
+flask-optimize
 uwsgi
 pymysql

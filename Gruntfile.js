@@ -6,8 +6,14 @@ module.exports = function (grunt) {
         // Metadata.
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
-            build: {
-                files: []
+            target: {
+                options: {
+                    mangle: false
+                },
+                files: {
+                    'Coralite/static/js/main.min.js': 'Coralite/static/js/main.js',
+                    'Coralite/static/js/util.min.js': 'Coralite/static/js/util.js'
+                }
             }
         },
         cssmin: {
@@ -16,8 +22,6 @@ module.exports = function (grunt) {
                 dest: 'Coralite/static/css/main.min.css'
             }
         }
-
-
     });
 
     // These plugins provide necessary tasks.

@@ -1,10 +1,13 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from config import password, ip
+from flask_optimize import FlaskOptimize
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://coralite:' + password + '@' + ip + '/coralite'
 db = SQLAlchemy(app)
+
+flask_optimize = FlaskOptimize()
 
 
 class Descriptions(db.Model):
