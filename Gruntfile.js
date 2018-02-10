@@ -14,7 +14,9 @@ module.exports = function (grunt) {
                     'Coralite/static/js/main.min.js': 'Coralite/static/js/main.js',
                     'Coralite/static/js/util.min.js': 'Coralite/static/js/util.js',
                     'Coralite/static/js/skel.min.js': 'Coralite/static/js/skel.js',
-                    'Coralite/static/js/skel-layers.min.js': 'Coralite/static/js/skel-layers.js'
+                    'Coralite/static/js/skel-layers.min.js': 'Coralite/static/js/skel-layers.js',
+                    'Coralite/static/js/jquery.scrollzer.min.js': 'Coralite/static/js/jquery.scrollzer.js',
+                    'Coralite/static/js/jquery.scrolly.min.js': 'Coralite/static/js/jquery.scrolly.js'
                 }
             }
         },
