@@ -12,7 +12,9 @@ module.exports = function (grunt) {
                 },
                 files: {
                     'Coralite/static/js/main.min.js': 'Coralite/static/js/main.js',
-                    'Coralite/static/js/util.min.js': 'Coralite/static/js/util.js'
+                    'Coralite/static/js/util.min.js': 'Coralite/static/js/util.js',
+                    'Coralite/static/js/skel.min.js': 'Coralite/static/js/skel.js',
+                    'Coralite/static/js/skel-layers.min.js': 'Coralite/static/js/skel-layers.js'
                 }
             }
         },
