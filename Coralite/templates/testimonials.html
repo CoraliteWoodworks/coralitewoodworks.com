@@ -70,11 +70,11 @@
             </header>
 
             <ul class="icons">
-                {% for number in range(1, row + 1) %}
-                    <li> "{{ content[number - 1] }}"
-                        <a href="{{ link[number - 1] }}"
-                           class="icon fa-{{ source[number - 1] }}" target="_blank" rel="noopener"
-                           title="{{ source[number - 1]|title }} Testimonial }}"></a>
+                {% for testimonial in testimonials %}
+                    <li class="testimonial"> "{{ testimonial.content }}"
+                        <a href="{{ testimonial.link }}"
+                           class="icon fa-{{ testimonial.source }}" target="_blank" rel="noopener"
+                           title="{{ testimonial.source|title }}"></a>
                     </li>
                 {% endfor %}
             </ul>

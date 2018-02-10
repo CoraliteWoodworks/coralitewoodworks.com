@@ -18,8 +18,8 @@ module.exports = function (grunt) {
         },
         cssmin: {
             style: {
-                src: 'Coralite/static/css/main.css',
-                dest: 'Coralite/static/css/main.min.css'
+                src: ['Coralite/static/css/prologue.css', 'Coralite/static/css/main.css'],
+                dest: 'Coralite/static/css/coralite.min.css'
             }
         }
     });

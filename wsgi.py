@@ -1,4 +1,5 @@
 from flask import render_template
+from sqlalchemy import func
 
 from Coralite import *
 
@@ -7,7 +8,8 @@ from Coralite import *
 @flask_optimize.optimize()
 def main():
     page_description = Descriptions.query.filter_by(portfolio="default").first()
-    return render_template('index.html', page_description=page_description)
+    testimonials = Testimonials.query.order_by(func.rand()).limit(3).all()
+    return render_template('index.html', page_description=page_description, testimonials=testimonials)
 
 
 def show(n, Class, portfolio, portfolio_full):
@@ -46,21 +48,9 @@ def page_not_found(e):
 @flask_optimize.optimize()
 def testimonials():
     page_description = Descriptions.query.filter_by(portfolio="default").first()
-    row = Testimonials.query.count()
-    content = []
-    for num in range(1, row + 1):
-        data = Testimonials.query.filter_by(id=num).first()
-        content.append(Testimonials.get_content(data))
-    source = []
-    for num in range(1, row + 1):
-        data = Testimonials.query.filter_by(id=num).first()
-        source.append(Testimonials.get_source(data))
-    link = []
-    for num in range(1, row + 1):
-        data = Testimonials.query.filter_by(id=num).first()
-        link.append(Testimonials.get_link(data))
-    return render_template('testimonials.html', content=content, source=source, link=link, row=row,
-                           page_description=page_description)
+    testimonials = Testimonials.query.all()
+    return render_template('testimonials.html', page_description=page_description, testimonials=testimonials)
+
 
 
 @app.route('/additions', methods=['GET'], defaults={'n': 0})

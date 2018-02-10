@@ -151,32 +151,13 @@
                 <h2>Testimonials</h2>
             </header>
             <ul class="icons">
-                <li class="testimonial">"This job was a complete finishing of our large basement. It included putting up metal studs,
-                    framing, insulating, sheetrocking walls and ceilings, all electrical (20+ recessed lights), full
-                    bathroom including toilet, urinal, sink, shower and cabinets,
-                    gym, TV room, game room, replacing windows and doors (all Andersen), finishing stairs, building
-                    railings, all trim, installing a wall fireplace and more."
-                    <a href="https://www.houzz.com/viewReview/26697/Coralite-Woodworks-LLC--review"
-                       class="icon fa-houzz" target="_blank" rel="noopener" title="Houzz Testimonial"><span
-                            class="label">(elovely) - Via Houzz</span></a>
-                </li>
-                <li>"I have hired Coralite many times for projects ranging from kitchen cabinetry to new windows. Just
-                    recently he created a new front door using the existing barn doors that were there. Brian is a true
-                    craftsman with exquisite attention to detail. I
-                    have been so thoroughly satisfied with his work that I continue to hire him whenever I need
-                    something done. He is a perfectionist and understands what I'm looking for -- often with ideas that
-                    enhance the job in ways I never thought of. Professional,
-                    creative, talented and also a very nice person. It doesn't get much better than that when you hire
-                    someone to come into your home. He is my first recommendation to anyone. He is excellent."<a
-                            href="https://www.houzz.com/viewReview/125250/Coralite-Woodworks-LLC--review"
-                            class="icon fa-houzz" target="_blank" rel="noopener" title="Houzz Testimonial"><span
-                            class="label">(yolster16) - Via Houzz</span></a>
-                </li>
-                <li>"Brian is one of the best cabinet makers I have ever had been privileged to know and use..... if you
-                    need and demand quality, you owe it to yourself to see his work."<a
-                            href="https://www.facebook.com/Coralitewoodworks/posts/308157279225373"
-                            class="icon fa-facebook" target="_blank" rel="noopener"><span
-                            class="label" title="Facebook Testimonial">(Lee Maynard) - Via Facebook</span></a></li>
+                {% for testimonial in testimonials %}
+                    <li class="testimonial"> "{{ testimonial.content }}"
+                        <a href="{{ testimonial.link }}"
+                           class="icon fa-{{ testimonial.source }}" target="_blank" rel="noopener"
+                           title="{{ testimonial.source|title }}"></a>
+                    </li>
+                {% endfor %}
             </ul>
             <a href="{{ url_for('testimonials') }}" class="button">Read More</a>
         </div>
