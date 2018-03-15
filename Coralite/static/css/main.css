@@ -13,3 +13,35 @@ li.testimonial {
 .item header h5 {
     font-size: 0.7em;
 }
+
+.cp_reset_style img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.nivo-main-image img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.cp_reset_style {
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.nivo-controlNav.nivo-thumbs-enabled img {
+  object-fit: cover;
+  overflow: hidden;
+  max-width: 250px;
+}
