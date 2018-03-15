@@ -60,7 +60,7 @@
         <div class="container">
             {% if data.images > 0 %}
                 <div class="fotorama" data-nav="thumbs" data-loop="true" data-arrows="true" data-trackpad="true"
-                     data-click="false" data-swipe="true" data-allowfullscreen="true">
+                     data-click="false" data-swipe="true" data-allowfullscreen="true" data-width="100%">
                     {% for number in range(data.images) %} %}
                         <a href="/static/images/{{ portfolio.lower() }}/{{ id }}/{{ number + 1 }}.jpg"></a>
                     {% endfor %}
@@ -81,16 +81,16 @@
                         var c = document.getElementsByTagName("script")[0];
                         c.parentNode.insertBefore(cp, c);
                     })(); </script>
-                {% if data.description != None %}
-                    <p>
-                        {{ data.description }}
-                    </p>
-                {% endif %}
-                {% if data.location != None %}
-                    <h4>
-                        <span class="fa fa-map-marker"></span> {{ data.location }}
-                    </h4>
-                {% endif %}
+            {% endif %}
+            {% if data.description != None %}
+                <p>
+                    {{ data.description }}
+                </p>
+            {% endif %}
+            {% if data.location != None %}
+                <h4>
+                    <span class="fa fa-map-marker"></span> {{ data.location }}
+                </h4>
             {% endif %}
         </div>
     </section>
