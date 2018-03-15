@@ -55,6 +55,7 @@ class Additions(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -76,12 +77,6 @@ class Additions(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Bars(db.Model):
     __tablename__ = 'bars'
@@ -90,6 +85,7 @@ class Bars(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -111,12 +107,6 @@ class Bars(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Basements(db.Model):
     __tablename__ = 'basements'
@@ -125,6 +115,7 @@ class Basements(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -146,12 +137,6 @@ class Basements(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Bathrooms(db.Model):
     __tablename__ = 'bathrooms'
@@ -160,6 +145,7 @@ class Bathrooms(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -181,12 +167,6 @@ class Bathrooms(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Builtins(db.Model):
     __tablename__ = 'builtins'
@@ -195,6 +175,7 @@ class Builtins(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -216,12 +197,6 @@ class Builtins(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Decks(db.Model):
     __tablename__ = 'decks'
@@ -230,6 +205,7 @@ class Decks(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -251,12 +227,6 @@ class Decks(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Kitchens(db.Model):
     __tablename__ = 'kitchens'
@@ -265,6 +235,7 @@ class Kitchens(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -286,12 +257,6 @@ class Kitchens(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Mantels(db.Model):
     __tablename__ = 'mantels'
@@ -300,6 +265,7 @@ class Mantels(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -321,12 +287,6 @@ class Mantels(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Mudrooms(db.Model):
     __tablename__ = 'mudrooms'
@@ -335,6 +295,7 @@ class Mudrooms(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -356,12 +317,6 @@ class Mudrooms(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Offices(db.Model):
     __tablename__ = 'offices'
@@ -370,6 +325,7 @@ class Offices(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -391,12 +347,6 @@ class Offices(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Paneling(db.Model):
     __tablename__ = 'paneling'
@@ -405,6 +355,7 @@ class Paneling(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -426,12 +377,6 @@ class Paneling(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class Stock(db.Model):
     __tablename__ = 'stock'
@@ -440,6 +385,7 @@ class Stock(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -461,12 +407,6 @@ class Stock(db.Model):
         else:
             return ""
 
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo
-
 
 class TV(db.Model):
     __tablename__ = 'tv'
@@ -475,6 +415,7 @@ class TV(db.Model):
     location = db.Column('location', db.String(length=128))
     gallery_id = db.Column('gallery_id', db.String(length=255), unique=True)
     cpo = db.Column('cpo', db.String(length=255))
+    images = db.Column('images', db.Integer, nullable=False, default=0)
 
     def __init__(self, description, gallery_id, cpo):
         self.description = description
@@ -495,9 +436,3 @@ class TV(db.Model):
             return self.location
         else:
             return ""
-
-    def get_gallery_id(self):
-        return self.gallery_id
-
-    def get_cpo(self):
-        return self.cpo

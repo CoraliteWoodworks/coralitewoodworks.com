@@ -28,13 +28,8 @@ def show(n, Class, portfolio, portfolio_full):
                                description=description, location=location, page_description=page_description, )
     elif int(n) >= 1:
         data = Class.query.filter_by(id=n).first()
-        description = Class.get_description(data)
-        location = Class.get_location(data)
-        gallery_id = Class.get_gallery_id(data)
-        cpo = Class.get_cpo(data)
         return render_template('Gallery Basic.html', portfolio=portfolio, portfolioFull=portfolio_full,
-                               description=description, location=location, id=int(n), page_description=page_description,
-                               gallery_id=gallery_id, cpo=cpo, row=row)
+                               id=int(n), page_description=page_description, row=row, data=data)
 
 
 @app.errorhandler(404)
@@ -50,7 +45,6 @@ def testimonials():
     page_description = Descriptions.query.filter_by(portfolio="default").first()
     testimonials = Testimonials.query.all()
     return render_template('testimonials.html', page_description=page_description, testimonials=testimonials)
-
 
 
 @app.route('/additions', methods=['GET'], defaults={'n': 0})
