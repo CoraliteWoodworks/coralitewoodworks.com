@@ -3,6 +3,8 @@
 <head>
     <title>Coralite Woodworks | {{ portfolioFull }}</title>
     {% include 'wrapper/header.html' %}
+    <meta property="og:image" content="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}" />
+    <meta name="twitter:image" content="{{ url_for('static', filename = ('images/' ~ portfolio ~ '/' ~ number ~ '.jpg')) }}" />
 </head>
 <body>
 
