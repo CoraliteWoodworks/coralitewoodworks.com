@@ -6,10 +6,10 @@
         <title>Coralite Woodworks</title>
     {% endblock %}
     {% block metadata %}
-        {% include 'wrapper/metadata.html' %}
+        {% include 'include/metadata.html' %}
     {% endblock %}
     {% block header %}
-        {% include 'wrapper/header.html' %}
+        {% include 'include/header.html' %}
     {% endblock %}
 
 </head>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="bottom">
-        {% include 'wrapper/social.html' %}
+        {% include 'include/social.html' %}
     </div>
 
 </div>
@@ -46,10 +46,10 @@
 
 {% endblock %}
 
-{% include 'wrapper/footer.html' %}
+{% include 'include/footer.html' %}
 
 </body>
 {% block scripts %}
-    {% include 'wrapper/scripts.html' %}
+    {% include 'include/scripts.html' %}
 {% endblock %}
 </html>
