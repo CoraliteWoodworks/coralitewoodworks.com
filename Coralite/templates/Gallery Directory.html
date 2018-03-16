@@ -4,6 +4,7 @@
 {% endblock %}
 {% block metadata %}
     {{ super() }}
+    <meta name="twitter:title" content="Coralite Woodworks | {{ portfolioFull }}">
     <meta property="og:image"
           content="{{ url_for('static', filename = ('images/' ~ portfolio.lower() ~ '/1.jpg')) }}"/>
     <meta name="twitter:image"
