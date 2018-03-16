@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+
+<head>
+    {% block title %}
+        <title>Coralite Woodworks</title>
+    {% endblock %}
+    {% block metadata %}
+        {% include 'wrapper/metadata.html' %}
+    {% endblock %}
+    {% block header %}
+        {% include 'wrapper/header.html' %}
+    {% endblock %}
+
+</head>
+
+<body>
+<div id="header" class="skel-layers-fixed">
+
+    <div class="top">
+
+        <div id="logo">
+            <a href="{{ url_for('main') }}">
+                <picture>
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" type="image/webp">
+                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" type="image/jpeg">
+                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
+                         alt="Coralite Woodworks, LLC.">
+                </picture>
+            </a>
+        </div>
+
+        {% block nav %}
+
+        {% endblock %}
+
+    </div>
+
+    <div class="bottom">
+        {% include 'wrapper/social.html' %}
+    </div>
+
+</div>
+
+{% block body %}
+
+{% endblock %}
+
+{% include 'wrapper/footer.html' %}
+
+</body>
+{% block scripts %}
+    {% include 'wrapper/scripts.html' %}
+{% endblock %}
+</html>

@@ -1,70 +1,43 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
-<head>
+{% extends 'extend/template.html' %}
+{% block title %}
     <title>Coralite Woodworks | {{ portfolioFull }}</title>
-    {% include 'wrapper/header.html' %}
-</head>
-<body>
+{% endblock %}
+{% block metadata %}
+    {{ super() }}
+    <meta property="og:image"
+          content="{{ url_for('static', filename = ('images/' ~ portfolio.lower() ~ '/1.jpg')) }}"/>
+    <meta name="twitter:image"
+          content="{{ url_for('static', filename = ('images/' ~ portfolio.lower() ~ '/1.jpg')) }}"/>
+{% endblock %}
 
-<!-- Header -->
-<div id="header" class="skel-layers-fixed">
+{% block nav %}
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="{{ url_for('main') }}#portfolio" id="portfolio-link">
+                    <span class="icon fa-th">Design Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#galleries" id="portfolio-link2">
+                    <span class="icon fa-sitemap">{{ portfolioFull }}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
 
-    <div class="top">
+{% block body %}
+    <div id="main">
+        <!-- Portfolio -->
+        <section id="galleries" class="two">
+            <div class="container">
+                <header>
+                    <h2>{{ portfolioFull }}</h2>
+                </header>
 
-        <!-- Logo -->
-        <div id="logo">
-            <a href="{{ url_for('main') }}">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" type="image/webp">
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" type="image/jpeg">
-                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
-                         alt="Coralite Woodworks, LLC.">
-                </picture>
-            </a>
-        </div>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a href="{{ url_for('main') }}#portfolio" id="portfolio-link">
-                        <span class="icon fa-th">Design Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#galleries" id="portfolio-link2">
-                        <span class="icon fa-sitemap">{{ portfolioFull }}</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
+                {% include 'directory/noscript.html' %}
+            </div>
+        </section>
     </div>
-
-    <div class="bottom">
-        {% include 'wrapper/social.html' %}
-    </div>
-
-</div>
-
-<!-- Main -->
-<div id="main">
-    <!-- Portfolio -->
-    <section id="galleries" class="two">
-        <div class="container">
-            <header>
-                <h2>{{ portfolioFull }}</h2>
-            </header>
-
-            {% include 'directory/noscript.html' %}
-        </div>
-    </section>
-</div>
-
-{% include 'wrapper/footer.html' %}
-
-</body>
-
-</body>
-{% include 'wrapper/scripts.html' %}
-</html>
+{% endblock %}

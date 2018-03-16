@@ -1,121 +1,101 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
-<head>
+{% extends 'extend/template.html' %}
+{% block title %}
     <title>Coralite Woodworks | {{ portfolioFull }}</title>
-    {% include 'wrapper/header.html' %}
-    <meta property="og:image" content="{{ url_for('static', filename = ('images/' ~ portfolio.lower() ~ '/' ~ id ~ '.jpg')) }}" />
-    <meta name="twitter:image" content="{{ url_for('static', filename = ('images/' ~ portfolio.lower() ~ '/' ~ id ~ '.jpg')) }}" />
-</head>
-<body>
+{% endblock %}
+{% block metadata %}
+    {{ super() }}
+    <meta property="og:image"
+          content="{{ url_for('static', filename = ('images/' ~ portfolio.lower() ~ '/' ~ id ~ '.jpg')) }}"/>
+    <meta name="twitter:image"
+          content="{{ url_for('static', filename = ('images/' ~ portfolio.lower() ~ '/' ~ id ~ '.jpg')) }}"/>
+{% endblock %}
+{% block header %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    {{ super() }}
+{% endblock %}
 
-<!-- Header -->
-<div id="header" class="skel-layers-fixed">
+{% block nav %}
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="{{ url_for('main') }}#portfolio" id="portfolio-link">
+                    <span class="icon fa-th">Design Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about" id="about-link">
+                    <span class="icon fa-picture-o">Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for(portfolio.lower()) }}" id="about-link">
+                    <span class="icon fa-sitemap ">{{ portfolioFull }}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
 
-    <div class="top">
+{% block body %}
+    <div id="main">
+        <section id="about" class="three">
+            <div class="container">
+                {% if data.images > 0 %}
+                    <div class="fotorama" data-nav="thumbs" data-loop="true" data-arrows="true" data-trackpad="true"
+                         data-click="false" data-swipe="true" data-allowfullscreen="true" data-width="100%"
+                         data-maxheight="750px">
+                        {% for number in range(data.images) %} %}
+                            <a href="/static/images/{{ portfolio.lower() }}/{{ id }}/{{ number + 1 }}.jpg"></a>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <div id="{{ data.gallery_id }}">...</div>
+                    <script type="text/javascript">
+                        var cpo = [];
+                        cpo["_object"] = "{{ data.gallery_id }}";
+                        cpo["_fid"] = "{{ data.cpo }}";
+                        var _cpmp = _cpmp || [];
+                        _cpmp.push(cpo);
+                        (function () {
+                            var cp = document.createElement("script");
+                            cp.type = "text/javascript";
+                            cp.async = true;
+                            cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
+                            var c = document.getElementsByTagName("script")[0];
+                            c.parentNode.insertBefore(cp, c);
+                        })(); </script>
+                {% endif %}
+                {% if data.description != None %}
+                    <p>
+                        {{ data.description }}
+                    </p>
+                {% endif %}
+                {% if data.location != None %}
+                    <h4>
+                        <span class="fa fa-map-marker"></span> {{ data.location }}
+                    </h4>
+                {% endif %}
+            </div>
+        </section>
 
-        <!-- Logo -->
-        <div id="logo">
-            <a href="{{ url_for('main') }}">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" type="image/webp">
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" type="image/jpeg">
-                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
-                         alt="Coralite Woodworks, LLC.">
-                </picture>
-            </a>
-        </div>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a href="{{ url_for('main') }}#portfolio" id="portfolio-link">
-                        <span class="icon fa-th">Design Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" id="about-link">
-                        <span class="icon fa-picture-o">Gallery</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for(portfolio.lower()) }}" id="about-link">
-                        <span class="icon fa-sitemap ">{{ portfolioFull }}</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
+        <section id="contact" class="four">
+            <div class="container">
+                {% if id != 1 %}
+                    <a href="{{ id - 1 }}" class="button scrolly">Previous Gallery</a>
+                {% endif %}
+                <a href="{{ url_for(portfolio.lower()) }}" class="button scrolly">Back to {{ portfolioFull }}</a>
+                {% if id != row %}
+                    <a href="{{ id + 1 }}" class="button scrolly">Next Gallery</a></div>
+                {% endif %}
+        </section>
+        <section id="nav" class="four">
+            <div class="container">
+                <a href="{{ url_for('main') }}#portfolio" class="button scrolly">Back to Design Portfolio</a></div>
+        </section>
     </div>
+{% endblock %}
 
-    <div class="bottom">
-        {% include 'wrapper/social.html' %}
-    </div>
-
-</div>
-
-<!-- Main -->
-<div id="main">
-
-    <!-- About Me -->
-    <section id="about" class="three">
-        <div class="container">
-            {% if data.images > 0 %}
-                <div class="fotorama" data-nav="thumbs" data-loop="true" data-arrows="true" data-trackpad="true"
-                     data-click="false" data-swipe="true" data-allowfullscreen="true" data-width="100%" data-maxheight="750px">
-                    {% for number in range(data.images) %} %}
-                        <a href="/static/images/{{ portfolio.lower() }}/{{ id }}/{{ number + 1 }}.jpg"></a>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <div id="{{ data.gallery_id }}">...</div>
-                <script type="text/javascript">
-                    var cpo = [];
-                    cpo["_object"] = "{{ data.gallery_id }}";
-                    cpo["_fid"] = "{{ data.cpo }}";
-                    var _cpmp = _cpmp || [];
-                    _cpmp.push(cpo);
-                    (function () {
-                        var cp = document.createElement("script");
-                        cp.type = "text/javascript";
-                        cp.async = true;
-                        cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                        var c = document.getElementsByTagName("script")[0];
-                        c.parentNode.insertBefore(cp, c);
-                    })(); </script>
-            {% endif %}
-            {% if data.description != None %}
-                <p>
-                    {{ data.description }}
-                </p>
-            {% endif %}
-            {% if data.location != None %}
-                <h4>
-                    <span class="fa fa-map-marker"></span> {{ data.location }}
-                </h4>
-            {% endif %}
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="four">
-        <div class="container">
-            {% if id != 1 %}
-                <a href="{{ id - 1 }}" class="button scrolly">Previous Gallery</a>
-            {% endif %}
-            <a href="{{ url_for(portfolio.lower()) }}" class="button scrolly">Back to {{ portfolioFull }}</a>
-            {% if id != row %}
-                <a href="{{ id + 1 }}" class="button scrolly">Next Gallery</a></div>
-            {% endif %}
-    </section>
-    <section id="nav" class="four">
-        <div class="container">
-            <a href="{{ url_for('main') }}#portfolio" class="button scrolly">Back to Design Portfolio</a></div>
-    </section>
-</div>
-
-{% include 'wrapper/footer.html' %}
-
-</body>
-{% include 'wrapper/scripts.html' %}
-</html>
+{% block scripts %}
+    {{ super() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+{% endblock %}

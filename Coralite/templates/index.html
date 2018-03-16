@@ -1,63 +1,35 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
-
-<head>
+{% extends 'extend/template.html' %}
+{% block title %}
     <title>Coralite Woodworks</title>
-    {% include 'wrapper/header.html' %}
-</head>
+{% endblock %}
 
-<body>
-<!-- Header -->
-<div id="header" class="skel-layers-fixed">
+{% block nav %}
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="#portfolio" id="portfolio-link">
+                    <span class="icon fa-th">Design Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="#about" id="about-link">
+                    <span class="icon fa-user">About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="#testimonials" id="testimonial-link">
+                    <span class="icon fa-comments">Testimonials</span>
+                </a>
+            </li>
+            <li>
+                <a href="#contact" id="contact-link">
+                    <span class="icon fa-envelope">Contact Us</span></a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
 
-    <div class="top">
-
-        <!-- Logo -->
-        <div id="logo">
-            <a href="{{ url_for('main') }}">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" type="image/webp">
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" type="image/jpeg">
-                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
-                         alt="Coralite Woodworks, LLC.">
-                </picture>
-            </a>
-        </div>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a href="#portfolio" id="portfolio-link">
-                        <span class="icon fa-th">Design Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" id="about-link">
-                        <span class="icon fa-user">About Us</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#testimonials" id="testimonial-link">
-                        <span class="icon fa-comments">Testimonials</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact" id="contact-link">
-                        <span class="icon fa-envelope">Contact Us</span></a>
-                </li>
-            </ul>
-        </nav>
-
-    </div>
-
-    <div class="bottom">
-        {% include 'wrapper/social.html' %}
-    </div>
-
-</div>
-
-<!-- Main -->
+{% block body %}
 <div id="main">
 
     <!-- Intro -->
@@ -191,17 +163,4 @@
     </section>
 
 </div>
-
-{% include 'wrapper/footer.html' %}
-
-<!--
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register("{{ url_for('static', filename='service-worker.js') }}");
-}
-</script>
--->
-
-</body>
-{% include 'wrapper/scripts.html' %}
-</html>
+{% endblock %}

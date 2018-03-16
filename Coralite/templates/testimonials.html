@@ -1,102 +1,69 @@
-<!DOCTYPE HTML>
-<html lang="en-us">
-<head>
+{% extends 'extend/template.html' %}
+{% block title %}
     <title>Coralite Woodworks | Testimonials</title>
-    {% include 'wrapper/header.html' %}
-</head>
+{% endblock %}
 
-<body>
+{% block nav %}
+    <nav id="nav">
+        <ul>
+            <li>
+                <a href="{{ url_for('main') }}#portfolio" id="portfolio-link">
+                    <span class="icon fa-th">Design Portfolio</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('main') }}#about" id="about-link">
+                    <span class="icon fa-user">About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="#testimonials" id="testimonial-link">
+                    <span class="icon fa-comments">Testimonials</span>
+                </a>
+            </li>
+            <li>
+                <a href="{{ url_for('main') }}#contact" id="contact-link">
+                    <span class="icon fa-envelope">Contact Us</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+{% endblock %}
 
-<!-- Header -->
-<div id="header" class="skel-layers-fixed">
+{% block body %}
+    <div id="main">
 
-    <div class="top">
+        <!-- Testimonials -->
+        <section id="testimonials" class="three">
+            <div class="container">
 
-        <!-- Logo -->
-        <div id="logo">
-            <a href="{{ url_for('main') }}">
-                <picture>
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.webp') }}" type="image/webp">
-                    <source srcset="{{ url_for('static', filename='images/Logo Brown.jpg') }}" type="image/jpeg">
-                    <img src="{{ url_for('static', filename='images/Logo Brown.jpg') }}" width="100%" height=""
-                         alt="Coralite Woodworks, LLC.">
-                </picture>
-            </a>
-        </div>
-
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li>
-                    <a href="{{ url_for('main') }}#portfolio" id="portfolio-link">
-                        <span class="icon fa-th">Design Portfolio</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('main') }}#about" id="about-link">
-                        <span class="icon fa-user">About Us</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#testimonials" id="testimonial-link">
-                        <span class="icon fa-comments">Testimonials</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="{{ url_for('main') }}#contact" id="contact-link">
-                        <span class="icon fa-envelope">Contact Us</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-    </div>
-
-    <div class="bottom">
-        {% include 'wrapper/social.html' %}
-    </div>
-
-</div>
-
-<!-- Main -->
-<div id="main">
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="three">
-        <div class="container">
-
-            <header>
-                <h2>Testimonials</h2>
-            </header>
-
-            <ul class="icons">
-                {% for testimonial in testimonials %}
-                    <li class="testimonial"> "{{ testimonial.content }}"
-                        <a href="{{ testimonial.link }}"
-                           class="icon fa-{{ testimonial.source }}" target="_blank" rel="noopener"
-                           title="{{ testimonial.source|title }}"></a>
-                    </li>
-                {% endfor %}
-            </ul>
-            <ul class="icons">
                 <header>
-                    Like us? Leave us a Review!
+                    <h2>Testimonials</h2>
                 </header>
-                <li>
-                    <a href="https://www.facebook.com/Coralite-Woodworks-Residential-Remodeling-and-Custom-Cabinetry-109644202410016/reviews/"
-                       class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-                <li><a href="http://www.houzz.com/writeReview/cmd=r/n=coralite" class="icon fa-houzz"><span
-                        class="label">Houzz</span></a></li>
-                <li>
-                    <a href="https://www.yelp.com/writeareview/biz/a6eVvKAkpn6BoUEqll1KzQ?return_url=%2Fbiz%2Fa6eVvKAkpn6BoUEqll1KzQ"
-                       class="icon fa-yelp"><span class="label">Yelp</span></a></li>
-            </ul>
-        </div>
-    </section>
-</div>
 
-{% include 'wrapper/footer.html' %}
-
-</body>
-{% include 'wrapper/scripts.html' %}
-</html>
+                <ul class="icons">
+                    {% for testimonial in testimonials %}
+                        <li class="testimonial"> "{{ testimonial.content }}"
+                            <a href="{{ testimonial.link }}"
+                               class="icon fa-{{ testimonial.source }}" target="_blank" rel="noopener"
+                               title="{{ testimonial.source|title }}"></a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <ul class="icons">
+                    <header>
+                        Like us? Leave us a Review!
+                    </header>
+                    <li>
+                        <a href="https://www.facebook.com/Coralite-Woodworks-Residential-Remodeling-and-Custom-Cabinetry-109644202410016/reviews/"
+                           class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="http://www.houzz.com/writeReview/cmd=r/n=coralite" class="icon fa-houzz"><span
+                            class="label">Houzz</span></a></li>
+                    <li>
+                        <a href="https://www.yelp.com/writeareview/biz/a6eVvKAkpn6BoUEqll1KzQ?return_url=%2Fbiz%2Fa6eVvKAkpn6BoUEqll1KzQ"
+                           class="icon fa-yelp"><span class="label">Yelp</span></a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+{% endblock %}
