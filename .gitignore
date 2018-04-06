@@ -4,3 +4,6 @@ config.py
 __pycache__/
 Coralite/static/components/*
 Coralite/static/components
+Coralite/static/css/coralite.min.css
+node_modules
+
